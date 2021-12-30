@@ -32,10 +32,14 @@ public class MainActivity extends AppCompatActivity implements DefaultHardwareBa
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rn);
+        //navigation
+//        ReactFragment fragment = new ReactFragment.Builder()
+//            .setComponentName("NestedPage")
+//            .setLaunchOptions(getLaunchOptions("NestedB"))
+//            .build();
         ReactFragment fragment = new ReactFragment.Builder()
-            .setComponentName("NestedPage")
-            .setLaunchOptions(getLaunchOptions("NestedB"))
-            .build();
+                .setComponentName("Example")
+                .build();
         getSupportFragmentManager()
             .beginTransaction()
             .add(R.id.reactNativeFragment, fragment)

@@ -12,6 +12,7 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.swmansion.reanimated.ReanimatedJSIModulePackage;
+//import com.swmansion.reanimated.ReanimatedJSIModulePackage;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;

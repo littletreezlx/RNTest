@@ -2497,6 +2497,11 @@ depd@~1.1.2:
   resolved "https://registry.nlark.com/depd/download/depd-1.1.2.tgz"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
 
+dequal@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.nlark.com/dequal/download/dequal-1.0.0.tgz#41c6065e70de738541c82cdbedea5292277a017e"
+  integrity sha1-QcYGXnDec4VByCzb7epSkid6AX4=
+
 destroy@~1.0.4:
   version "1.0.4"
   resolved "https://registry.nlark.com/destroy/download/destroy-1.0.4.tgz"
@@ -5483,6 +5488,13 @@ react-native-codegen@^0.0.7:
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
 
+react-native-collapsible-tab-view@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.npmmirror.com/react-native-collapsible-tab-view/download/react-native-collapsible-tab-view-4.4.0.tgz#5eebeb22e00458402a04c1ca1b29c34a1398eebc"
+  integrity sha1-XuvrIuAEWEAqBMHKGynDShOY7rw=
+  dependencies:
+    use-deep-compare "^1.1.0"
+
 react-native-gesture-handler@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmmirror.com/react-native-gesture-handler/download/react-native-gesture-handler-2.1.0.tgz"
@@ -6634,6 +6646,13 @@ urix@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmmirror.com/urix/download/urix-0.1.0.tgz"
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
+
+use-deep-compare@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.nlark.com/use-deep-compare/download/use-deep-compare-1.1.0.tgz#85580dde751f68400bf6ef7e043c7f986595cef8"
+  integrity sha1-hVgN3nUfaEAL9u9+BDx/mGWVzvg=
+  dependencies:
+    dequal "1.0.0"
 
 use-subscription@^1.0.0:
   version "1.5.1"
