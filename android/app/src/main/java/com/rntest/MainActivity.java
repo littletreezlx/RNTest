@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements DefaultHardwareBa
 //            .setLaunchOptions(getLaunchOptions("NestedB"))
 //            .build();
         ReactFragment fragment = new ReactFragment.Builder()
-                .setComponentName("Example")
+                .setComponentName("MainPage")
                 .build();
         getSupportFragmentManager()
             .beginTransaction()

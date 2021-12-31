@@ -15,7 +15,7 @@ type Props = {
   emptyContacts?: boolean
 } & Partial<CollapsibleProps>
 
-const Example = React.forwardRef<CollapsibleRef, Props>(
+const ExampleContent = React.forwardRef<CollapsibleRef, Props>(
   ({ emptyContacts, ...props }, ref) => {
     return (
       <Tabs.Container ref={ref} headerHeight={HEADER_HEIGHT} {...props}>
@@ -36,4 +36,4 @@ const Example = React.forwardRef<CollapsibleRef, Props>(
   }
 )
 
-export default Example
+export default ExampleContent
