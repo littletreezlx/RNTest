@@ -8,6 +8,8 @@ import UseContextTestPage from './src/hooktest/UseContextTestPage';
 import UseEffectTestPage from './src/hooktest/UseEffectTestPage';
 import AnimatedHeaderPage from './src/collapse/AnimatedHeader';
 import TalentPageNew from './src/zozotest/talent/TalentPage';
+import CollapseTestPage from './src/collapse/CollapseTestPage';
+import AsyncStoragePage from './src/other/storage/AsyncStoragePage';
 
 
 
@@ -19,8 +21,11 @@ import TalentPageNew from './src/zozotest/talent/TalentPage';
 
 // const MainPage = AnimatedHeaderPage
 
-const MainPage = TalentPageNew
+// const MainPage = TalentPageNew
 // const MainPage = CustomTestPage
+
+// const MainPage = CollapseTestPage
+const MainPage = AsyncStoragePage
 
 
 

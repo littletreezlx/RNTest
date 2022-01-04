@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, ListRenderItem} from 'react-native';
-import {Tabs} from 'react-native-collapsible-tab-view';
+import {MaterialTabBar, Tabs} from 'react-native-collapsible-tab-view';
 
 const HEADER_HEIGHT = 250;
 
@@ -11,7 +11,7 @@ const Header = () => {
   return <View style={styles.header} />;
 };
 
-const Example: React.FC = () => {
+const CollapseTestPage: React.FC = () => {
   const renderItem: ListRenderItem<number> = React.useCallback(
     ({item, index}) => {
       // console.log('🚀 ~ file: CollapseTestPage.js ~ line 17 ~ index', index);
@@ -25,27 +25,29 @@ const Example: React.FC = () => {
     [],
   );
 
+  
+  const TabBarComponent = ()=>{
+    return <View style = {styles.test_tab_bar}></View>
+  }
+
   return (
     <Tabs.Container
       renderHeader={Header}
       headerHeight={HEADER_HEIGHT} // optional
+      renderTabBar={TabBarComponent}
     >
-      <Tabs.Tab name="A">
+      <Tabs.Tab  name="A">
         <Tabs.FlatList
           data={DATA}
           renderItem={renderItem}
           keyExtractor={identity}
         />
       </Tabs.Tab>
-      <Tabs.Tab name="B">
-        <Tabs.ScrollView>
-          <View style={[styles.box, styles.boxA]} />
-          <View style={[styles.box, styles.boxB]} />
-        </Tabs.ScrollView>
-      </Tabs.Tab>
     </Tabs.Container>
   );
 };
+
+
 
 const styles = StyleSheet.create({
   box: {
@@ -63,6 +65,11 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: '#2196f3',
   },
+  test_tab_bar: {
+    height: 0,
+    width: '100%',
+    backgroundColor: '#000000',
+  },
 });
 
-export default Example;
+export default CollapseTestPage;

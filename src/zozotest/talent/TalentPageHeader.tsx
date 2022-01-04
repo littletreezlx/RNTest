@@ -34,8 +34,6 @@ export const TalentPageHeader = () => {
 };
 
 
-
-
 const styles = StyleSheet.create({
   root: {
     backgroundColor: '#2196f3',

@@ -1,10 +1,11 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {
   CollapsibleProps,
   CollapsibleRef,
   Tab,
   Tabs,
+  useHeaderMeasurements,
 } from 'react-native-collapsible-tab-view';
 import ExampleContent from '../../collapse/Shared/ExampleComponent';
 import TalentPageHeader from './TalentPageHeader';
@@ -13,16 +14,28 @@ import TalentPageHeader from './TalentPageHeader';
 export const MIN_HEADER_HEIGHT = 48;
 export const HEADER_HEIGHT = 250;
 
+
+
+
 type Props = {
   emptyContacts?: boolean;
 } & Partial<CollapsibleProps>;
 
+
+const TabBarComponent = ()=>{
+  return <View style = {styles.invisible_tab_bar}></View>
+}
+
+
 const TalentPage = React.forwardRef<CollapsibleRef, Props>(
   ({emptyContacts, ...props}, ref) => {
+
+    const {top, height} = useHeaderMeasurements();
+
+
     return (
       <Tabs.Container ref={ref} headerHeight={HEADER_HEIGHT} {...props}>
-        <Tabs.Tab 
-        name = 'test' >
+        <Tabs.Tab name = 'test' >
           <Tabs.ScrollView style={styles.scroll}>
             <Text>'AAA'</Text>
             <Text>'BBB'</Text>
@@ -56,6 +69,10 @@ const styles = StyleSheet.create({
   scroll: {
     color: 'white',
     backgroundColor: 'black',
+  },
+  invisible_tab_bar: {
+    height: 0,
+    width: '100%',
   },
 });
 
