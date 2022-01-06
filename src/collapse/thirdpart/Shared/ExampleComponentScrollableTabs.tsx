@@ -3,7 +3,7 @@ import {
   Tabs,
   MaterialTabBar,
   CollapsibleProps,
-} from 'react-native-collapsible-tab-view'
+} from '../../collapsibleTabView'
 
 import { ArticleContent } from './Article'
 import { HEADER_HEIGHT } from './Header'

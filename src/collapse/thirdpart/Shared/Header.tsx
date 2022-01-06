@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
-import { TabBarProps } from 'react-native-collapsible-tab-view'
+import { TabBarProps } from '../../collapsibleTabView'
 
 type Props = {
   title: string

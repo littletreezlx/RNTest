@@ -6,7 +6,7 @@ import {
   Platform,
   TouchableOpacity,
 } from 'react-native'
-import * as Tabs from 'react-native-collapsible-tab-view'
+import * as Tabs from '../../collapsibleTabView'
 import Animated, {
   interpolate,
   useAnimatedStyle,

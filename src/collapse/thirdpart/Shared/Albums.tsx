@@ -6,7 +6,8 @@ import {
   View,
   RefreshControl,
 } from 'react-native'
-import { Tabs } from 'react-native-collapsible-tab-view'
+import { Tabs } from '../../collapsibleTabView'
+
 
 import { useRefresh } from './useRefresh'
 

@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { View, Text, Image, StyleSheet, RefreshControl } from 'react-native'
-import { Tabs } from 'react-native-collapsible-tab-view'
-
+import { Tabs } from '../../collapsibleTabView'
 import { useRefresh } from './useRefresh'
 
 export const ArticleContent = () => {

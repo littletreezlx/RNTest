@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, StyleSheet, View} from 'react-native';
-import {useHeaderMeasurements} from 'react-native-collapsible-tab-view';
+import {useHeaderMeasurements} from '../../downloadCollapse';
 import Animated, {interpolate, useAnimatedStyle} from 'react-native-reanimated';
 import ExampleComponent from './Shared/ExampleComponent';
 import {ExampleComponentType} from './types';

@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, ListRenderItem} from 'react-native';
-import {MaterialTabBar, Tabs} from 'react-native-collapsible-tab-view';
+import { Tabs } from '../collapsibleTabView';
+// import {MaterialTabBar, Tabs} from '../../downloadCollapse';
 
 const HEADER_HEIGHT = 250;
 
@@ -26,15 +27,15 @@ const CollapseTestPage: React.FC = () => {
   );
 
   
-  const TabBarComponent = ()=>{
-    return <View style = {styles.test_tab_bar}></View>
-  }
+  // const TabBarComponent = ()=>{
+  //   return <View style = {styles.test_tab_bar}></View>
+  // }
 
   return (
     <Tabs.Container
       renderHeader={Header}
       headerHeight={HEADER_HEIGHT} // optional
-      renderTabBar={TabBarComponent}
+      // renderTabBar={TabBarComponent}
     >
       <Tabs.Tab  name="A">
         <Tabs.FlatList

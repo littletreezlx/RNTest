@@ -3,7 +3,7 @@ import {
   Tabs,
   CollapsibleRef,
   CollapsibleProps,
-} from 'react-native-collapsible-tab-view'
+} from '../../collapsibleTabView'
 
 import Albums from './Albums'
 import Article from './Article'

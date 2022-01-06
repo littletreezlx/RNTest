@@ -5,7 +5,7 @@ import {
   Tabs,
   CollapsibleProps,
   CollapsibleRef,
-} from 'react-native-collapsible-tab-view'
+} from '../../collapsibleTabView'
 
 import Contacts from './Contacts'
 import { HEADER_HEIGHT } from './Header'
