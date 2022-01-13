@@ -7,6 +7,7 @@ import MyCollapseTestPage from './src/collapse/my/MyCollapseTestPage';
 import AnimatedPage from './src/collapse/my/AnimatedPage';
 import CollapseTestPage from './src/collapse/thirdpart/CollapseTestPage';
 import TalentPageNew from './src/zozotest/talent/TalentPage';
+import { FadeInView } from './src/anim/reactAnim';
 
 // const MainPage = UseStateTestPage
 // const MainPage = UseContextTestPage
@@ -26,7 +27,7 @@ import TalentPageNew from './src/zozotest/talent/TalentPage';
 const RNTest = () => {
   return (
     <Provider store={store}>
-      <TalentPageNew />
+      <AnimatedPage />
     </Provider>
   );
 };
