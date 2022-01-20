@@ -8,6 +8,8 @@ import AnimatedPage from './src/collapse/my/AnimatedPage';
 import CollapseTestPage from './src/collapse/thirdpart/CollapseTestPage';
 import TalentPageNew from './src/zozotest/talent/TalentPage';
 import { FadeInView } from './src/anim/reactAnim';
+import UseEffectTestPage from './src/hooktest/UseEffectTestPage';
+import FlatlistPage from './src/flatlist/FlatListPage';
 
 // const MainPage = UseStateTestPage
 // const MainPage = UseContextTestPage
@@ -27,7 +29,8 @@ import { FadeInView } from './src/anim/reactAnim';
 const RNTest = () => {
   return (
     <Provider store={store}>
-      <AnimatedPage />
+      {/* <AnimatedPage /> */}
+      <FlatlistPage/>
     </Provider>
   );
 };
