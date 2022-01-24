@@ -1,5 +1,6 @@
 import React, {memo, useCallback, useEffect, useMemo, useState} from 'react';
 import {FlatList, Text, View} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 import {color} from 'react-native-reanimated';
 import ItemView from './ItemView';
 
@@ -11,11 +12,16 @@ const FlatlistPage = () => {
     'c',
     'd',
     'e',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
   ]);
   const [a, setA] = useState(0);
 
@@ -26,12 +32,12 @@ const FlatlistPage = () => {
   //   setA(1);
   // }, []);
 
-  useEffect(() => {
-    console.log('useEffect2');
-    setTimeout(() => {
-      setA(1);
-    }, 1000);
-  }, []);
+  // useEffect(() => {
+  //   console.log('useEffect2');
+  //   setTimeout(() => {
+  //     setA(1);
+  //   }, 1000);
+  // }, []);
 
   // useEffect(() => {
   //   console.log('useEffect2');
@@ -42,25 +48,16 @@ const FlatlistPage = () => {
   //   }, 1000);
   // }, []);
 
-  const realItem = () => {
-    console.log('render__Item');
-    return (
-      <View>
-        <Text style={{color: 'black', fontSize: 100}}>{'123'}</Text>
-      </View>
-    );
-  };
-
-  const RealComponent = memo(realItem);
-  // const RealComponent = realItem
-
-  // const _renderItem = ({item}) => {
-  //   return <RealComponent />;
-  // };
-
-  const _renderItem = ({item}) => {
-    return <ItemView/>;
-  };
+  //content size changed
+  useEffect(() => {
+    console.log('useEffect2');
+    setTimeout(() => {
+      let list = Array.from({length: 100}, (item, index) =>
+        (index + 1).toString(),
+      );
+      setTestList(list);
+    }, 5000);
+  }, []);
 
   // const TestFlatList = useMemo(() => {
   //   return () => {
@@ -88,16 +85,47 @@ const FlatlistPage = () => {
   //   );
   // };
 
-  return (
-    <View>
+  const onpress = () => {
+    console.log('onpress');
+    let list = Array.from({length: 100}, (item, index) =>
+      (index + 1).toString(),
+    );
+    setTestList(list);
+  };
+
+  // const _renderItem = (item: any) => {
+  //   console.log('item___out' + item.item);
+  //   return (
+  //     <TouchableOpacity
+  //       style={{backgroundColor: 'grey', width: '100%'}}
+  //       onPress={onpress}>
+  //       <ItemView item={item.item} />
+  //     </TouchableOpacity>
+  //   );
+  // };
+
+  const _renderItem = (item: any) => {
+    console.log('item___out' + item.item);
+    return <ItemView item={item.item} />;
+  };
+
+  const TestFlatList = () => {
+    return (
       <FlatList<String>
+        // style={{backgroundColor: 'blue'}}
         data={testList}
         renderItem={_renderItem}
-        keyExtractor={item => {
+        keyExtractor={(item: String, index: Number) => {
           // console.log(item);
-          return '' + item.toUpperCase();
+          return '' + index;
         }}
       />
+    );
+  };
+
+  return (
+    <View>
+      <TestFlatList />
     </View>
   );
 };
