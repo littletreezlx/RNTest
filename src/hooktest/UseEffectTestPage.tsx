@@ -32,8 +32,6 @@ const UseEffectTestPage = () => {
     console.log(count);
   };
 
-  console.log(getCount);
-
   useEffect(() => {
     console.log(`You clicked ${count} times`);
     getCount();

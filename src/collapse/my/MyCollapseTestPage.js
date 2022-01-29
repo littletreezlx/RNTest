@@ -1,49 +1,35 @@
 import React, {Component, useRef} from 'react';
 import {StyleSheet, Text, View, Animated, FlatList} from 'react-native';
 
-class MyList extends Component {
-  render() {
-    // 模拟列表数据
-    const mockData = [
-      '富强',
-      '民主',
-      '文明',
-      '和谐',
-      '自由',
-      '平等',
-      '公正',
-      '法治',
-      '爱国',
-      '敬业',
-      '诚信',
-      '友善',
-      '富强',
-      '民主',
-      '文明',
-      '和谐',
-      '自由',
-      '平等',
-      '公正',
-      '法治',
-      '爱国',
-      '敬业',
-      '诚信',
-      '友善',
-    ];
 
-    return (
-      <FlatList
-        onScroll={this.props.onScroll}
-        data={mockData}
-        renderItem={({item}) => (
-          <View style={styles.list}>
-            <Text>{item}</Text>
-          </View>
-        )}
-      />
-    );
-  }
-}
+
+//https://www.jianshu.com/p/4ee0b587fc30
+const mockData = [
+  '富强',
+  '民主',
+  '文明',
+  '和谐',
+  '自由',
+  '平等',
+  '公正',
+  '法治',
+  '爱国',
+  '敬业',
+  '诚信',
+  '友善',
+  '富强',
+  '民主',
+  '文明',
+  '和谐',
+  '自由',
+  '平等',
+  '公正',
+  '法治',
+  '爱国',
+  '敬业',
+  '诚信',
+  '友善',
+];
 
 const MyCollapseTestPage = () => {
   const scrollY = useRef(new Animated.Value(0)).current;
@@ -52,21 +38,24 @@ const MyCollapseTestPage = () => {
   // 这样就不会导致Header在上滑的过程中一直向上滑动了
   const fixedHeaderTop = scrollY.interpolate({
     inputRange: [0, 50, 51],
-      outputRange: [0, -50, -50]
+    outputRange: [0, -50, -50],
   });
 
   const fixedListTop = scrollY.interpolate({
     inputRange: [0, 50, 100],
-      outputRange: [0,  -50, -50]
+    outputRange: [0, -50, -50],
   });
 
-  const animatedEvent = Animated.event([
-    {
-      nativeEvent: {
-        contentOffset: {y: scrollY},
+  const animatedEvent = Animated.event(
+    [
+      {
+        nativeEvent: {
+          contentOffset: {y: scrollY},
+        },
       },
-    },
-  ]);
+    ],
+    {useNativeDriver: true},
+  );
 
   return (
     <View style={styles.container}>
@@ -77,7 +66,15 @@ const MyCollapseTestPage = () => {
       </Animated.View>
       {/* 在oHeader组件上移的同时，列表容器也需要同时向上移动，需要注意。 */}
       <Animated.View style={{translateY: fixedListTop}}>
-        <MyList onScroll={animatedEvent} />
+        <Animated.FlatList
+          onScroll={animatedEvent}
+          data={mockData}
+          renderItem={({item}) => (
+            <View style={styles.list}>
+              <Text>{item}</Text>
+            </View>
+          )}
+        />
       </Animated.View>
     </View>
   );

@@ -37,7 +37,8 @@ const RNTest = () => {
         {/* <NativeBaseTestPage /> */}
         {/* <ConfirmDialogPage/> */}
         {/* <ReactAnimTestPage /> */}
-        <ReanimatedTestPage />
+        {/* <ReanimatedTestPage /> */}
+        <FlatlistPage />
     </Provider>
   );
 };

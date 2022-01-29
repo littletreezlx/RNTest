@@ -1,17 +1,17 @@
 import React, {memo} from 'react';
-import {Text, View} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {Text, TouchableOpacity, View} from 'react-native';
 
 const ItemView = (props: any) => {
   //   console.log('render__Item');
-  console.log(props);
+  // console.log(props);
 
   const onpress = () => {
+    let i = 1;
     console.log('onpress___in');
   };
 
   return (
-    <View>
+    <View style={{width: '100%', height:200, backgroundColor: 'white'}}>
       <TouchableOpacity onPress={onpress}>
         <Text style={{color: 'black', fontSize: 100}}>{props.item}</Text>
       </TouchableOpacity>
