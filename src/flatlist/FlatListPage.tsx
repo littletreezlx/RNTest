@@ -56,4 +56,5 @@ const FlatlistPage = () => {
   );
 };
 
+
 export default FlatlistPage;

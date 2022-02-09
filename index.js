@@ -13,10 +13,11 @@ import PureComponentPage from './src/other/pureComponent/PureComponentPage';
 import FlatlistPage from './src/flatlist/FlatListPage';
 import AlertPage from './src/other/alert/AlertPage';
 import {AlertDialog, NativeBaseProvider} from 'native-base';
-import { NativeBaseTestPage } from './src/other/nativeBase';
-import { ConfirmDialogPage } from './src/base/ConfirmDialogPage';
-import { ReanimatedTestPage } from './src/anim/reanimated';
-import { ReactAnimTestPage } from './src/anim/reactAnim';
+import {NativeBaseTestPage} from './src/other/nativeBase';
+import {ConfirmDialogPage} from './src/base/ConfirmDialogPage';
+import {ReanimatedTestPage} from './src/anim/reanimated';
+import {ReactAnimTestPage} from './src/anim/reactAnim';
+import BottomButtonPage from './src/other/bottom/BottomButtonPage';
 
 // const MainPage = UseStateTestPage
 // const MainPage = UseContextTestPage
@@ -33,12 +34,13 @@ import { ReactAnimTestPage } from './src/anim/reactAnim';
 const RNTest = () => {
   return (
     <Provider store={store}>
-        {/* <FlatlistPage/> */}
-        {/* <NativeBaseTestPage /> */}
-        {/* <ConfirmDialogPage/> */}
-        {/* <ReactAnimTestPage /> */}
-        {/* <ReanimatedTestPage /> */}
-        <FlatlistPage />
+      {/* <FlatlistPage/> */}
+      {/* <NativeBaseTestPage /> */}
+      {/* <ConfirmDialogPage/> */}
+      {/* <ReactAnimTestPage /> */}
+      {/* <ReanimatedTestPage /> */}
+      {/* <FlatlistPage /> */}
+      <BottomButtonPage />
     </Provider>
   );
 };
