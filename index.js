@@ -18,6 +18,8 @@ import {ConfirmDialogPage} from './src/base/ConfirmDialogPage';
 import {ReanimatedTestPage} from './src/anim/reanimated';
 import {ReactAnimTestPage} from './src/anim/reactAnim';
 import BottomButtonPage from './src/other/bottom/BottomButtonPage';
+import ModalPage from './src/other/dialog/CenterDialog';
+import CenterDialogPage from './src/other/dialog/CenterDialogPage';
 
 // const MainPage = UseStateTestPage
 // const MainPage = UseContextTestPage
@@ -40,7 +42,8 @@ const RNTest = () => {
       {/* <ReactAnimTestPage /> */}
       {/* <ReanimatedTestPage /> */}
       {/* <FlatlistPage /> */}
-      <BottomButtonPage />
+      {/* <BottomButtonPage /> */}
+      <CenterDialogPage />
     </Provider>
   );
 };
