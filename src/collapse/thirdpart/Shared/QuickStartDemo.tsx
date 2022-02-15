@@ -1,28 +1,30 @@
-import React from 'react'
-import { View, StyleSheet, ListRenderItem } from 'react-native'
-import { Tabs } from '../../collapsibleTabView'
+import React from 'react';
+import {View, StyleSheet, ListRenderItem} from 'react-native';
+import {Tabs} from '../../collapsibleTabView';
 
-const HEADER_HEIGHT = 250
+const HEADER_HEIGHT = 250;
 
-const DATA = [0, 1, 2, 3, 4]
-const identity = (v: unknown): string => v + ''
+const DATA = [0, 1, 2, 3, 4];
+const identity = (v: unknown): string => v + '';
 
 const Header = () => {
-  return <View style={styles.header} />
-}
+  return <View style={styles.header} />;
+};
 
-const Example: React.FC = () => {
-  const renderItem: ListRenderItem<number> = React.useCallback(({ index }) => {
+const QuickStartDemo: React.FC = () => {
+  const renderItem: ListRenderItem<number> = React.useCallback(({index}) => {
     return (
       <View style={[styles.box, index % 2 === 0 ? styles.boxB : styles.boxA]} />
-    )
-  }, [])
+    );
+  }, []);
 
   return (
     <Tabs.Container
       renderHeader={Header}
       headerHeight={HEADER_HEIGHT} // optional
-    >
+      onIndexChange={(index: number) => {
+        console.log(index);
+      }}>
       <Tabs.Tab name="A">
         <Tabs.FlatList
           data={DATA}
@@ -37,8 +39,8 @@ const Example: React.FC = () => {
         </Tabs.ScrollView>
       </Tabs.Tab>
     </Tabs.Container>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   box: {
@@ -56,6 +58,6 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: '#2196f3',
   },
-})
+});
 
-export default Example
+export default QuickStartDemo;

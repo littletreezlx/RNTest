@@ -6,55 +6,40 @@ import ItemView from './ItemView';
 
 const FlatlistPage = () => {
   console.log('render__root');
-  const [testList, setTestList] = useState<String[]>([
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-  ]);
+  // const [testList, setTestList] = useState<String[]>([
+  //   'a',
+  //   'b',
+  //   'c',
+  //   'd',
+  //   'e',
+  //   'a',
+  //   'b',
+  //   'c',
+  //   'd',
+  //   'e',
+  //   'a',
+  //   'b',
+  //   'c',
+  //   'd',
+  //   'e',
+  // ]);
 
-  const onpress = () => {
-    console.log('onpress');
-    let list = Array.from({length: 100}, (item, index) =>
-      (index + 1).toString(),
-    );
-    setTestList(list);
-  };
-
-  const _renderItem = (item: any) => {
-    return <ItemView item={item.item} />;
-  };
-
-  const onEndReached = () => {
-    console.log('onEndReached');
-  };
+  // const _renderItem = () => {
+  //   // return <ItemView item={item.item} />;
+  //   return <></>;
+  // };
 
   return (
-    <View>
+    <>
       <FlatList<String>
-        data={testList}
-        renderItem={_renderItem}
+        data={[]}
+        renderItem={() => <></>}
         keyExtractor={(item: String, index: Number) => {
-          // console.log(item);
           return '' + index;
         }}
-        onEndReached={onEndReached}
-        onEndReachedThreshold={0.4}
       />
-    </View>
+    </>
   );
 };
-
 
 export default FlatlistPage;
