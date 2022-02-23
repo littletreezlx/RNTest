@@ -1,10 +1,10 @@
-import { Container } from './Container'
-import { FlatList } from './FlatList'
-import { Lazy } from './Lazy'
-import { MaterialTabBarProps, MaterialTabItemProps } from './MaterialTabBar'
-import { ScrollView } from './ScrollView'
-import { SectionList } from './SectionList'
-import { Tab } from './Tab'
+import {Container} from './Container';
+import {FlatList} from './FlatList';
+import {Lazy} from './Lazy';
+import {MaterialTabBarProps, MaterialTabItemProps} from './MaterialTabBar';
+import {ScrollView} from './ScrollView';
+import {SectionList} from './SectionList';
+import {Tab} from './Tab';
 import {
   TabBarProps,
   CollapsibleProps,
@@ -12,7 +12,7 @@ import {
   ContainerRef,
   CollapsibleRef,
   OnTabChangeCallback,
-} from './types'
+} from './types';
 
 export type {
   TabBarProps,
@@ -23,7 +23,7 @@ export type {
   MaterialTabItemProps,
   CollapsibleRef,
   OnTabChangeCallback,
-}
+};
 
 export const Tabs = {
   Container,
@@ -32,14 +32,14 @@ export const Tabs = {
   FlatList,
   ScrollView,
   SectionList,
-}
+};
 
-export { Container, Tab, Lazy, FlatList, ScrollView, SectionList }
+export {Container, Tab, Lazy, FlatList, ScrollView, SectionList};
 export {
   useHeaderMeasurements,
   useFocusedTab,
   useAnimatedTabIndex,
   useCollapsibleStyle,
-} from './hooks'
-export { MaterialTabBar } from './MaterialTabBar'
-export { MaterialTabItem } from './MaterialTabBar'
+} from './hooks';
+export {MaterialTabBar} from './MaterialTabBar';
+export {MaterialTabItem} from './MaterialTabBar';

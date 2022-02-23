@@ -2,7 +2,7 @@ import React, {useState, useEffect, useCallback, useRef} from 'react';
 import {Button, Text, View} from 'react-native';
 
 const UseEffectTestPage = () => {
-  const ary = useRef(['a']);
+  console.log('render');
   const [count, setCount] = useState(0);
   const [desc, setDesc] = useState(`You clicked {count} times`);
 
@@ -28,19 +28,21 @@ const UseEffectTestPage = () => {
   //   console.log('testDep');
   // }, [testDep]);
 
-  const getCount = () => {
-    console.log(count);
+  const onPress = () => {
+    // setCount(count + 1);
+    // setCount(count => count + 1);
+    setCount(count => count);
   };
 
   useEffect(() => {
     console.log(`You clicked ${count} times`);
-    getCount();
-  }, [getCount]);
+    console.log(count);
+  }, [count]);
 
   return (
     <View>
       <Text>{desc}</Text>
-      <Button title={'Click me'} onPress={() => setCount(count + 1)}></Button>
+      <Button title={'Click me'} onPress={onPress}></Button>
     </View>
   );
 };

@@ -1,8 +1,8 @@
-import React from 'react'
-import { ScrollViewProps, ScrollView as RNScrollView } from 'react-native'
-import Animated from 'react-native-reanimated'
+import React from 'react';
+import {ScrollViewProps, ScrollView as RNScrollView} from 'react-native';
+import Animated from 'react-native-reanimated';
 
-import { IS_IOS } from './helpers'
+import {IS_IOS} from './helpers';
 import {
   useAfterMountEffect,
   useChainCallback,
@@ -12,7 +12,7 @@ import {
   useTabNameContext,
   useTabsContext,
   useUpdateScrollViewContentSize,
-} from './hooks'
+} from './hooks';
 
 /**
  * Used as a memo to prevent rerendering too often when the context changes.
@@ -27,10 +27,10 @@ const ScrollViewMemo = React.memo(
           ref={passRef}
           {...props}
         />
-      )
-    }
-  )
-)
+      );
+    },
+  ),
+);
 
 /**
  * Use like a regular ScrollView.
@@ -48,37 +48,37 @@ export const ScrollView = React.forwardRef<
       refreshControl,
       ...rest
     },
-    passRef
+    passRef,
   ) => {
-    const name = useTabNameContext()
-    const ref = useSharedAnimatedRef<RNScrollView>(passRef)
-    const { setRef, contentInset, scrollYCurrent } = useTabsContext()
+    const name = useTabNameContext();
+    const ref = useSharedAnimatedRef<RNScrollView>(passRef);
+    const {setRef, contentInset, scrollYCurrent} = useTabsContext();
     const {
       style: _style,
       contentContainerStyle: _contentContainerStyle,
       progressViewOffset,
-    } = useCollapsibleStyle()
-    const { scrollHandler, enable } = useScrollHandlerY(name)
+    } = useCollapsibleStyle();
+    const {scrollHandler, enable} = useScrollHandlerY(name);
     useAfterMountEffect(() => {
       // we enable the scroll event after mounting
       // otherwise we get an `onScroll` call with the initial scroll position which can break things
-      enable(true)
-    })
+      enable(true);
+    });
 
     React.useEffect(() => {
-      setRef(name, ref)
-    }, [name, ref, setRef])
+      setRef(name, ref);
+    }, [name, ref, setRef]);
 
     const scrollContentSizeChange = useUpdateScrollViewContentSize({
       name,
-    })
+    });
 
     const scrollContentSizeChangeHandlers = useChainCallback(
-      React.useMemo(() => [scrollContentSizeChange, onContentSizeChange], [
-        onContentSizeChange,
-        scrollContentSizeChange,
-      ])
-    )
+      React.useMemo(
+        () => [scrollContentSizeChange, onContentSizeChange],
+        [onContentSizeChange, scrollContentSizeChange],
+      ),
+    );
 
     const memoRefreshControl = React.useMemo(
       () =>
@@ -87,28 +87,28 @@ export const ScrollView = React.forwardRef<
           progressViewOffset,
           ...refreshControl.props,
         }),
-      [progressViewOffset, refreshControl]
-    )
+      [progressViewOffset, refreshControl],
+    );
     const memoContentOffset = React.useMemo(
       () => ({
         y: IS_IOS ? -contentInset.value + scrollYCurrent.value : 0,
         x: 0,
       }),
-      [contentInset.value, scrollYCurrent.value]
-    )
+      [contentInset.value, scrollYCurrent.value],
+    );
     const memoContentInset = React.useMemo(
-      () => ({ top: contentInset.value }),
-      [contentInset.value]
-    )
+      () => ({top: contentInset.value}),
+      [contentInset.value],
+    );
     const memoContentContainerStyle = React.useMemo(
       () => [
         _contentContainerStyle,
         // TODO: investigate types
         contentContainerStyle as any,
       ],
-      [_contentContainerStyle, contentContainerStyle]
-    )
-    const memoStyle = React.useMemo(() => [_style, style], [_style, style])
+      [_contentContainerStyle, contentContainerStyle],
+    );
+    const memoStyle = React.useMemo(() => [_style, style], [_style, style]);
 
     return (
       <ScrollViewMemo
@@ -123,10 +123,9 @@ export const ScrollView = React.forwardRef<
         contentInset={memoContentInset}
         contentOffset={memoContentOffset}
         automaticallyAdjustContentInsets={false}
-        refreshControl={memoRefreshControl}
-      >
+        refreshControl={memoRefreshControl}>
         {children}
       </ScrollViewMemo>
-    )
-  }
-)
+    );
+  },
+);

@@ -23,6 +23,9 @@ import CenterDialogPage from './src/other/dialog/CenterDialogPage';
 import QuickStartDemo from './src/collapse/thirdpart/Shared/QuickStartDemo';
 import TabViewPage from './src/zozotest/TabViewPage';
 import SingleView from './src/zozotest/SingleView';
+import SwitchPage from './src/testthird/SwitchPage';
+import HocTestPage from './src/hoc/HocTestPage';
+import UseStateTestPage from './src/hooktest/UseStateTestPage';
 
 // const MainPage = UseStateTestPage
 // const MainPage = UseContextTestPage
@@ -74,9 +77,13 @@ const RNTest = () => {
       {/* <BottomButtonPage /> */}
       {/* <CenterDialogPage /> */}
 
-      <TabViewPage />
+      {/* <SwitchPage /> */}
       {/* <Profiler id="TabViewPage" onRender={onRenderCallback}>
       </Profiler> */}
+
+      {/* <UseEffectTestPage /> */}
+      {/* <HocTestPage /> */}
+      <UseStateTestPage />
     </Provider>
   );
 };

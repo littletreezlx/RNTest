@@ -2,18 +2,16 @@ import React, {useState} from 'react';
 import {Button} from 'react-native';
 
 const UseStateTestPage = () => {
-  const [buttonText, setButtonText] = useState('Click me,   please');
-
-  const handleClick = () => {
-    return setButtonText('Thanks, been clicked!');
-  };
+  console.log('render');
+  const [count, setCount] = useState(0);
+  const [A, setA] = useState(0);
 
   return (
     <Button
-      title={buttonText}
+      title={count.toString()}
       onPress={() => {
-        console.log('AAA');
-        setButtonText('Thanks, been clicked!');
+        setCount(count + 1);
+        setA(state => state + 1);
       }}
       disabled={false}></Button>
   );

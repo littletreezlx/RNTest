@@ -1,7 +1,7 @@
-import React from 'react'
-import { FlatList as RNFlatList, FlatListProps } from 'react-native'
+import React from 'react';
+import {FlatList as RNFlatList, FlatListProps} from 'react-native';
 
-import { AnimatedFlatList, IS_IOS } from './helpers'
+import {AnimatedFlatList, IS_IOS} from './helpers';
 import {
   useAfterMountEffect,
   useChainCallback,
@@ -11,7 +11,7 @@ import {
   useTabNameContext,
   useTabsContext,
   useUpdateScrollViewContentSize,
-} from './hooks'
+} from './hooks';
 
 /**
  * Used as a memo to prevent rerendering too often when the context changes.
@@ -20,10 +20,10 @@ import {
 const FlatListMemo = React.memo(
   React.forwardRef<RNFlatList, React.PropsWithChildren<FlatListProps<unknown>>>(
     (props, passRef) => {
-      return <AnimatedFlatList ref={passRef} {...props} />
-    }
-  )
-)
+      return <AnimatedFlatList ref={passRef} {...props} />;
+    },
+  ),
+);
 
 function FlatListImpl<R>(
   {
@@ -33,39 +33,39 @@ function FlatListImpl<R>(
     refreshControl,
     ...rest
   }: Omit<FlatListProps<R>, 'onScroll'>,
-  passRef: React.Ref<RNFlatList>
+  passRef: React.Ref<RNFlatList>,
 ): React.ReactElement {
-  const name = useTabNameContext()
-  const { setRef, contentInset, scrollYCurrent } = useTabsContext()
-  const ref = useSharedAnimatedRef<RNFlatList<unknown>>(passRef)
+  const name = useTabNameContext();
+  const {setRef, contentInset, scrollYCurrent} = useTabsContext();
+  const ref = useSharedAnimatedRef<RNFlatList<unknown>>(passRef);
 
-  const { scrollHandler, enable } = useScrollHandlerY(name)
+  const {scrollHandler, enable} = useScrollHandlerY(name);
   useAfterMountEffect(() => {
     // we enable the scroll event after mounting
     // otherwise we get an `onScroll` call with the initial scroll position which can break things
-    enable(true)
-  })
+    enable(true);
+  });
 
   const {
     style: _style,
     contentContainerStyle: _contentContainerStyle,
     progressViewOffset,
-  } = useCollapsibleStyle()
+  } = useCollapsibleStyle();
 
   React.useEffect(() => {
-    setRef(name, ref)
-  }, [name, ref, setRef])
+    setRef(name, ref);
+  }, [name, ref, setRef]);
 
   const scrollContentSizeChange = useUpdateScrollViewContentSize({
     name,
-  })
+  });
 
   const scrollContentSizeChangeHandlers = useChainCallback(
-    React.useMemo(() => [scrollContentSizeChange, onContentSizeChange], [
-      onContentSizeChange,
-      scrollContentSizeChange,
-    ])
-  )
+    React.useMemo(
+      () => [scrollContentSizeChange, onContentSizeChange],
+      [onContentSizeChange, scrollContentSizeChange],
+    ),
+  );
 
   const memoRefreshControl = React.useMemo(
     () =>
@@ -74,27 +74,28 @@ function FlatListImpl<R>(
         progressViewOffset,
         ...refreshControl.props,
       }),
-    [progressViewOffset, refreshControl]
-  )
+    [progressViewOffset, refreshControl],
+  );
   const memoContentOffset = React.useMemo(
     () => ({
       y: IS_IOS ? -contentInset.value + scrollYCurrent.value : 0,
       x: 0,
     }),
-    [contentInset.value, scrollYCurrent.value]
-  )
-  const memoContentInset = React.useMemo(() => ({ top: contentInset.value }), [
-    contentInset.value,
-  ])
+    [contentInset.value, scrollYCurrent.value],
+  );
+  const memoContentInset = React.useMemo(
+    () => ({top: contentInset.value}),
+    [contentInset.value],
+  );
   const memoContentContainerStyle = React.useMemo(
     () => [
       _contentContainerStyle,
       // TODO: investigate types
       contentContainerStyle as any,
     ],
-    [_contentContainerStyle, contentContainerStyle]
-  )
-  const memoStyle = React.useMemo(() => [_style, style], [_style, style])
+    [_contentContainerStyle, contentContainerStyle],
+  );
+  const memoStyle = React.useMemo(() => [_style, style], [_style, style]);
 
   return (
     // @ts-expect-error typescript complains about `unknown` in the memo, it should be T
@@ -113,12 +114,12 @@ function FlatListImpl<R>(
       automaticallyAdjustContentInsets={false}
       refreshControl={memoRefreshControl}
     />
-  )
+  );
 }
 
 /**
  * Use like a regular FlatList.
  */
 export const FlatList = React.forwardRef(FlatListImpl) as <T>(
-  p: FlatListProps<T> & { ref?: React.Ref<RNFlatList<T>> }
-) => React.ReactElement
+  p: FlatListProps<T> & {ref?: React.Ref<RNFlatList<T>>},
+) => React.ReactElement;
