@@ -1,12 +1,8 @@
-import React from 'react'
-import {
-  Tabs,
-  MaterialTabBar,
-  CollapsibleProps,
-} from '../../collapsibleTabView'
+import React from 'react';
+import {Tabs, MaterialTabBar, CollapsibleProps} from '../../collapsibleTabView';
 
-import { ArticleContent } from './Article'
-import { HEADER_HEIGHT } from './Header'
+import {ArticleContent} from './Article';
+import {HEADER_HEIGHT} from './Header';
 
 const TabNames = [
   'screenA',
@@ -18,29 +14,28 @@ const TabNames = [
   'screenG',
   'screenH',
   'screenI',
-] as const
+] as const;
 
-type Props = Partial<CollapsibleProps>
+type Props = Partial<CollapsibleProps>;
 
-const Example: React.FC<Props> = (props) => {
+const Example: React.FC<Props> = props => {
   return (
     <Tabs.Container
       headerHeight={HEADER_HEIGHT}
       lazy
-      TabBarComponent={(props) => <MaterialTabBar {...props} scrollEnabled />}
-      {...props}
-    >
-      {TabNames.map((name) => {
+      TabBarComponent={props => <MaterialTabBar {...props} scrollEnabled />}
+      {...props}>
+      {TabNames.map(name => {
         return (
           <Tabs.Tab name={name} key={name}>
             <Tabs.ScrollView>
               <ArticleContent />
             </Tabs.ScrollView>
           </Tabs.Tab>
-        )
+        );
       })}
     </Tabs.Container>
-  )
-}
+  );
+};
 
-export default Example
+export default Example;
