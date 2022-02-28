@@ -15,7 +15,7 @@ import AlertPage from './src/other/alert/AlertPage';
 import {AlertDialog, NativeBaseProvider} from 'native-base';
 import {NativeBaseTestPage} from './src/other/nativeBase';
 import {ConfirmDialogPage} from './src/base/ConfirmDialogPage';
-import {ReanimatedTestPage} from './src/anim/reanimated';
+import {ReanimatedTestPage} from './src/testthird/reanimated';
 import {ReactAnimTestPage} from './src/anim/reactAnim';
 import BottomButtonPage from './src/other/bottom/BottomButtonPage';
 import ModalPage from './src/other/dialog/CenterDialog';
@@ -26,6 +26,7 @@ import SingleView from './src/zozotest/SingleView';
 import SwitchPage from './src/testthird/SwitchPage';
 import HocTestPage from './src/hoc/HocTestPage';
 import UseStateTestPage from './src/hooktest/UseStateTestPage';
+import { HookTestPage } from './src/hooktest';
 
 // const MainPage = UseStateTestPage
 // const MainPage = UseContextTestPage
@@ -82,8 +83,8 @@ const RNTest = () => {
       </Profiler> */}
 
       {/* <UseEffectTestPage /> */}
-      {/* <HocTestPage /> */}
-      <UseStateTestPage />
+      <HookTestPage />
+      {/* <ReanimatedTestPage /> */}
     </Provider>
   );
 };

@@ -1,35 +1,45 @@
-import React, {useMemo, useState} from 'react';
-import {Button, View} from 'react-native';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import {Button, Text, View} from 'react-native';
 
+export default function () {
+  console.log('render_root');
+  const [A, setA] = useState(true);
+  const memoTest = useMemo(() => {
+    console.log('in memo');
+    return 1;
+  }, []);
+  // console.log(memoTest);
 
-const renderCntMap = {}
+  const callbackTest = useCallback(() => {
+    console.log('in callback');
+    return 1;
+  }, []);
 
-function Comp({ name }) {
-  renderCntMap[name] = (renderCntMap[name] || 0) + 1
+  console.log(callbackTest());
+
+  const onRress = useCallback(() => {
+    console.log('onPress' + memoTest);
+    setA(true);
+  }, [memoTest]);
+
+  const MemoView = useMemo(() => {
+    console.log('render_momo');
+
+    return <Text>123</Text>;
+  }, []);
+
+  const CallBackView = useCallback(() => {
+    console.log('render_callback');
+    return <Text>321</Text>;
+  }, []);
+
   return (
-    <div>
-      组件「{name}」 Render 次数：{renderCntMap[name]}
-    </div>
-  )
-}
-
-export default function App() {
-  const setCnt = useState(0)[1]
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setCnt(v => v + 1)
-    }, 1000)
-    return () => clearInterval(timer)
-  }, [setCnt])
-
-  const comp = useMemo(() => {
-    return <Comp name="使用 useMemo 作为 children" />
-  }, [])
-
-  return (
-    <div className="App">
-      <Comp name="直接作为 children" />
-      {comp}
-    </div>
-  )
+    <View>
+      <Button title="useMemo" onPress={onRress} />
+      {/* <MemoView /> */}
+      {MemoView}
+      <CallBackView />
+      <Button title="useMuseCallbackemo" onPress={callbackTest} />
+    </View>
+  );
 }

@@ -711,17 +711,17 @@
     pirates "^4.0.0"
     source-map-support "^0.5.16"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.15.4", "@babel/runtime@^7.6.2", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
-  version "7.16.7"
-  resolved "https://registry.npmmirror.com/@babel/runtime/download/@babel/runtime-7.16.7.tgz#03ff99f64106588c9c403c6ecb8c3bafbbdff1fa"
-  integrity sha512-9E9FJowqAsytyOY6LG+1KuueckRL+aQW+mKvXRXnuFGyRAyepJPmEo9vgMfXUA6O9u3IeEdv9MAkppFcaQwogQ==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
 "@babel/runtime@^7.12.5", "@babel/runtime@^7.8.4":
   version "7.16.5"
   resolved "https://registry.npmmirror.com/@babel/runtime/download/@babel/runtime-7.16.5.tgz"
   integrity sha512-TXWihFIS3Pyv5hzR7j6ihmeLkZfrXGxAr5UfSl8CHf+6q/wpiYDkUau0czckpYG8QmnCIuPpdLtuA9VmuGGyMA==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
+"@babel/runtime@^7.15.4", "@babel/runtime@^7.9.2":
+  version "7.16.7"
+  resolved "https://registry.npmmirror.com/@babel/runtime/download/@babel/runtime-7.16.7.tgz#03ff99f64106588c9c403c6ecb8c3bafbbdff1fa"
+  integrity sha512-9E9FJowqAsytyOY6LG+1KuueckRL+aQW+mKvXRXnuFGyRAyepJPmEo9vgMfXUA6O9u3IeEdv9MAkppFcaQwogQ==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -793,45 +793,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@formatjs/ecma402-abstract@1.11.2":
-  version "1.11.2"
-  resolved "https://registry.npmmirror.com/@formatjs/ecma402-abstract/download/@formatjs/ecma402-abstract-1.11.2.tgz#7f01595e6985a28983aae26bede9b78b273fee3d"
-  integrity sha512-qDgOL0vtfJ51cc0pRbFB/oXc4qDbamG22Z6h/QWy6FBxaQgppiy8JF0iYbmNO35cC8r88bQGsgfd/eM6/eTEQQ==
-  dependencies:
-    "@formatjs/intl-localematcher" "0.2.23"
-    tslib "^2.1.0"
-
-"@formatjs/fast-memoize@1.2.1":
-  version "1.2.1"
-  resolved "https://registry.npmmirror.com/@formatjs/fast-memoize/download/@formatjs/fast-memoize-1.2.1.tgz#e6f5aee2e4fd0ca5edba6eba7668e2d855e0fc21"
-  integrity sha512-Rg0e76nomkz3vF9IPlKeV+Qynok0r7YZjL6syLz4/urSg0IbjPZCB/iYUMNsYA643gh4mgrX3T7KEIFIxJBQeg==
-  dependencies:
-    tslib "^2.1.0"
-
-"@formatjs/icu-messageformat-parser@2.0.17":
-  version "2.0.17"
-  resolved "https://registry.npmmirror.com/@formatjs/icu-messageformat-parser/download/@formatjs/icu-messageformat-parser-2.0.17.tgz#0f817aa06d3b9f23ae0a8bd667b5d7785df5017c"
-  integrity sha512-GO4DzmyiDUyT4p9UxSlOcdnRL1CCt43oHBBGe21s5043UjP6dwMbOotugKs1bRiN+FrNrRUSW+TLdT3+4CBI5A==
-  dependencies:
-    "@formatjs/ecma402-abstract" "1.11.2"
-    "@formatjs/icu-skeleton-parser" "1.3.4"
-    tslib "^2.1.0"
-
-"@formatjs/icu-skeleton-parser@1.3.4":
-  version "1.3.4"
-  resolved "https://registry.npmmirror.com/@formatjs/icu-skeleton-parser/download/@formatjs/icu-skeleton-parser-1.3.4.tgz#5508ff60cce4eb4698917cb50cb9ff576dde6e5b"
-  integrity sha512-BbKjX3rF3hq2bRjI9NjnSPUrNqI1TwwbMomOBamWfAkpOEf4LYEezPL9tHEds/+sN2/82Z+qEmK7s/l9G2J+qA==
-  dependencies:
-    "@formatjs/ecma402-abstract" "1.11.2"
-    tslib "^2.1.0"
-
-"@formatjs/intl-localematcher@0.2.23":
-  version "0.2.23"
-  resolved "https://registry.npmmirror.com/@formatjs/intl-localematcher/download/@formatjs/intl-localematcher-0.2.23.tgz#5a0b1d81df1f392ecf37e556ca7040a7ec9f72e8"
-  integrity sha512-oCe2TOciTtB1bEbJ85EvYrXQxD0epusmVJfJ7AduO0tlbXP42CmDIYIH2CZ+kP2GE+PTLQD1Hbt9kpOpl939MQ==
-  dependencies:
-    tslib "^2.1.0"
-
 "@hapi/hoek@^9.0.0":
   version "9.2.1"
   resolved "https://registry.npmmirror.com/@hapi/hoek/download/@hapi/hoek-9.2.1.tgz"
@@ -857,28 +818,6 @@
   version "1.2.1"
   resolved "https://registry.npmmirror.com/@humanwhocodes/object-schema/download/@humanwhocodes/object-schema-1.2.1.tgz"
   integrity "sha1-tSBSnsIdjllFoYUd/Rwy6U45/0U= sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA=="
-
-"@internationalized/date@3.0.0-alpha.1":
-  version "3.0.0-alpha.1"
-  resolved "https://registry.npmmirror.com/@internationalized/date/download/@internationalized/date-3.0.0-alpha.1.tgz#987a86a98b837f275bce084ef502421bc5cdb5f7"
-  integrity sha512-fxciU4AQ/4XBYfse/mT9h1nsyNkmQkxwQtTmQVu6b4Tp2u95Y3m5BNgWgV2m3vLiiKZ82NtHJXAIGoqiK53w4g==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-
-"@internationalized/message@^3.0.2":
-  version "3.0.3"
-  resolved "https://registry.npmmirror.com/@internationalized/message/download/@internationalized/message-3.0.3.tgz#bdedde42d02f935e06a1cb2f3b0dacc5228e782a"
-  integrity sha512-TpNLP6FgzD9kukdNOhcxYhULf1mcE7Du+eMZe5voSP/yWlAl9GsJqPVY2knsR5Ld1oQELhxU61griqn6uhGsnA==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    intl-messageformat "^9.6.12"
-
-"@internationalized/number@^3.0.2":
-  version "3.0.3"
-  resolved "https://registry.npmmirror.com/@internationalized/number/download/@internationalized/number-3.0.3.tgz#d29003dffdff54ca6f2287ec0cb77ff3d045478f"
-  integrity sha1-0pAD3/3/VMpvIofsDLd/89BFR48=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
@@ -1084,387 +1023,6 @@
     "@types/node" "*"
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
-
-"@react-aria/checkbox@^3.2.1":
-  version "3.2.3"
-  resolved "https://registry.npmmirror.com/@react-aria/checkbox/download/@react-aria/checkbox-3.2.3.tgz#be7f1f881e6d0fb554b5b20b9243e31e222207d5"
-  integrity sha1-vn8fiB5tD7VUtbILkkPjHiIiB9U=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/label" "^3.1.3"
-    "@react-aria/toggle" "^3.1.4"
-    "@react-aria/utils" "^3.8.2"
-    "@react-stately/checkbox" "^3.0.3"
-    "@react-stately/toggle" "^3.2.3"
-    "@react-types/checkbox" "^3.2.3"
-
-"@react-aria/combobox@^3.0.0-alpha.1":
-  version "3.2.1"
-  resolved "https://registry.npmmirror.com/@react-aria/combobox/download/@react-aria/combobox-3.2.1.tgz#dab1504b1ba77b224b59d89f4e7ab99c71e28806"
-  integrity sha512-1wWZZfmlSjede8d0o3kNMfr6KDTgZuaKLmkzZ5NOwAip76HQ1u+sJdZrT+6xZrN1QPGM+MLZbBfQJBSEZsoHOA==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/i18n" "^3.3.3"
-    "@react-aria/interactions" "^3.7.0"
-    "@react-aria/listbox" "^3.4.0"
-    "@react-aria/live-announcer" "^3.0.1"
-    "@react-aria/menu" "^3.3.0"
-    "@react-aria/overlays" "^3.7.3"
-    "@react-aria/selection" "^3.7.1"
-    "@react-aria/textfield" "^3.5.0"
-    "@react-aria/utils" "^3.11.0"
-    "@react-stately/collections" "^3.3.3"
-    "@react-stately/combobox" "^3.0.1"
-    "@react-stately/layout" "^3.4.0"
-    "@react-types/button" "^3.4.1"
-    "@react-types/combobox" "^3.2.1"
-    "@react-types/shared" "^3.10.1"
-
-"@react-aria/focus@^3.2.3", "@react-aria/focus@^3.4.1", "@react-aria/focus@^3.5.0":
-  version "3.5.0"
-  resolved "https://registry.npmmirror.com/@react-aria/focus/download/@react-aria/focus-3.5.0.tgz#02b85f97d6114af1eccc0902ce40723b626cb7f9"
-  integrity sha1-Arhfl9YRSvHszAkCzkByO2Jst/k=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/interactions" "^3.6.0"
-    "@react-aria/utils" "^3.9.0"
-    "@react-types/shared" "^3.9.0"
-    clsx "^1.1.1"
-
-"@react-aria/i18n@^3.2.0", "@react-aria/i18n@^3.3.2", "@react-aria/i18n@^3.3.3":
-  version "3.3.4"
-  resolved "https://registry.npmmirror.com/@react-aria/i18n/download/@react-aria/i18n-3.3.4.tgz#172b8bcff0273410e67af31f7d84e49dd3ada463"
-  integrity sha512-1DV3I82UfL2dT8WBI/88TwtokO80B7ISSyuz6rO/6n7q76A/nC2AtVINbrGYrcKsCcxCEoEMxW5RVJ39fcLijA==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@internationalized/date" "3.0.0-alpha.1"
-    "@internationalized/message" "^3.0.2"
-    "@internationalized/number" "^3.0.2"
-    "@react-aria/ssr" "^3.0.3"
-    "@react-aria/utils" "^3.10.0"
-    "@react-types/shared" "^3.10.0"
-
-"@react-aria/interactions@^3.3.2", "@react-aria/interactions@^3.5.1", "@react-aria/interactions@^3.6.0", "@react-aria/interactions@^3.7.0":
-  version "3.7.0"
-  resolved "https://registry.npmmirror.com/@react-aria/interactions/download/@react-aria/interactions-3.7.0.tgz#eb19c1068b557a6b6df1e1c4abef07de719e9f25"
-  integrity sha512-Xomchjb9bqvh3ocil+QCEYFSxsTy8PHEz43mNP6z2yuu3UqTpl2FsWfyKgF/Yy0WKVkyV2dO2uz758KJTCLZhw==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/utils" "^3.10.0"
-    "@react-types/shared" "^3.10.0"
-
-"@react-aria/label@^3.1.1", "@react-aria/label@^3.1.3", "@react-aria/label@^3.2.1":
-  version "3.2.1"
-  resolved "https://registry.npmmirror.com/@react-aria/label/download/@react-aria/label-3.2.1.tgz#e6562259e6b17e3856c4c3e0060903cf705d094b"
-  integrity sha512-QZ5/dpJKRjB1JtFZfOVd5GUiCpA2yMgmNA6ky6jT5XNAo7H14QqGRFUGDTLAQYGd+Bc3s+NayOT3NKUYur/3Xw==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/utils" "^3.10.0"
-    "@react-types/label" "^3.5.0"
-    "@react-types/shared" "^3.10.0"
-
-"@react-aria/listbox@^3.2.4", "@react-aria/listbox@^3.4.0":
-  version "3.4.0"
-  resolved "https://registry.npmmirror.com/@react-aria/listbox/download/@react-aria/listbox-3.4.0.tgz#384f72f544540b53cb56f5734949aff6f3be723e"
-  integrity sha512-Tc6JAPHrNKbjFMOCI50YHFBltSxBc84CaLIQdVo4c9KYiwgoAy1ULeSnRyp4ru3qpnffJZEUCNWD+864+MZVEQ==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/focus" "^3.4.1"
-    "@react-aria/interactions" "^3.7.0"
-    "@react-aria/label" "^3.2.1"
-    "@react-aria/selection" "^3.7.0"
-    "@react-aria/utils" "^3.10.0"
-    "@react-stately/collections" "^3.3.3"
-    "@react-stately/list" "^3.4.0"
-    "@react-types/listbox" "^3.2.1"
-    "@react-types/shared" "^3.10.0"
-
-"@react-aria/live-announcer@^3.0.0-alpha.0", "@react-aria/live-announcer@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.npmmirror.com/@react-aria/live-announcer/download/@react-aria/live-announcer-3.0.1.tgz#772888326808d180adc5bc9fa0b4b1416ec08811"
-  integrity sha1-dyiIMmgI0YCtxbyfoLSxQW7AiBE=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/utils" "^3.8.2"
-    "@react-aria/visually-hidden" "^3.2.3"
-
-"@react-aria/menu@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.npmmirror.com/@react-aria/menu/download/@react-aria/menu-3.3.0.tgz#09364a306b3b0dec7f3cf532bfa184a1f4e26da7"
-  integrity sha512-e/5zlWSwcsUYxH+kLrACPhLxh/Z+8/xvAB90G7xjBble1RusYQ+iH+M2U1n5vqoenZ3vjBpmEDsdo6vHeFeKxQ==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/interactions" "^3.7.0"
-    "@react-aria/overlays" "^3.7.3"
-    "@react-aria/selection" "^3.7.0"
-    "@react-aria/utils" "^3.10.0"
-    "@react-stately/collections" "^3.3.3"
-    "@react-stately/menu" "^3.2.3"
-    "@react-stately/tree" "^3.2.0"
-    "@react-types/button" "^3.4.1"
-    "@react-types/menu" "^3.3.0"
-    "@react-types/shared" "^3.10.0"
-
-"@react-aria/overlays@^3.6.1", "@react-aria/overlays@^3.7.0", "@react-aria/overlays@^3.7.3":
-  version "3.7.3"
-  resolved "https://registry.npmmirror.com/@react-aria/overlays/download/@react-aria/overlays-3.7.3.tgz#b107b1d31c04c538355e566b1034d23e5696c18a"
-  integrity sha512-N5F/TVJ9KIYgGuOknVMrRnqqzkNKcFos4nxLHQz4TeFZTp4/P+NqEHd/VBmjsSTNEjEuNAivG+U2o4F1NWn/Pw==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/i18n" "^3.3.3"
-    "@react-aria/interactions" "^3.7.0"
-    "@react-aria/utils" "^3.10.0"
-    "@react-aria/visually-hidden" "^3.2.3"
-    "@react-stately/overlays" "^3.1.3"
-    "@react-types/button" "^3.4.1"
-    "@react-types/overlays" "^3.5.1"
-    dom-helpers "^3.3.1"
-
-"@react-aria/radio@^3.1.2":
-  version "3.1.6"
-  resolved "https://registry.npmmirror.com/@react-aria/radio/download/@react-aria/radio-3.1.6.tgz#6fc26d750db8026d58ff3900877df3c09ffe08c5"
-  integrity sha512-ngpnlSXWcwOB65HoEw510BkG7I/REeM59cz8y1TQ4k1zPX//qsWOpl2ngmT4yZybLAg+B9VwDkdE5kw5KlRo1g==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/focus" "^3.4.1"
-    "@react-aria/i18n" "^3.3.3"
-    "@react-aria/interactions" "^3.7.0"
-    "@react-aria/label" "^3.2.1"
-    "@react-aria/utils" "^3.10.0"
-    "@react-stately/radio" "^3.3.2"
-    "@react-types/radio" "^3.1.2"
-
-"@react-aria/selection@^3.3.1", "@react-aria/selection@^3.3.2", "@react-aria/selection@^3.7.0", "@react-aria/selection@^3.7.1":
-  version "3.7.1"
-  resolved "https://registry.npmmirror.com/@react-aria/selection/download/@react-aria/selection-3.7.1.tgz#885e02f8d424b11f1f8ca7840228c18fd26dd783"
-  integrity sha512-XvDv0W5QRDjZl9nPETy5cFuQ0xi7RHogagt2cf2TUjJ11sSB1pLcb5WJvG5enLl50ENaIDxZduZzLEziC0dEmw==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/focus" "^3.5.0"
-    "@react-aria/i18n" "^3.3.3"
-    "@react-aria/interactions" "^3.7.0"
-    "@react-aria/utils" "^3.11.0"
-    "@react-stately/collections" "^3.3.3"
-    "@react-stately/selection" "^3.9.0"
-    "@react-types/shared" "^3.10.1"
-
-"@react-aria/slider@^3.0.1":
-  version "3.0.3"
-  resolved "https://registry.npmmirror.com/@react-aria/slider/download/@react-aria/slider-3.0.3.tgz#de6945970cb7f7fd5c462f57bcb6245bfa0b6f73"
-  integrity sha1-3mlFlwy39/1cRi9XvLYkW/oLb3M=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/focus" "^3.4.1"
-    "@react-aria/i18n" "^3.3.2"
-    "@react-aria/interactions" "^3.5.1"
-    "@react-aria/label" "^3.1.3"
-    "@react-aria/utils" "^3.8.2"
-    "@react-stately/radio" "^3.3.2"
-    "@react-stately/slider" "^3.0.3"
-    "@react-types/radio" "^3.1.2"
-    "@react-types/slider" "^3.0.2"
-
-"@react-aria/ssr@^3.0.1", "@react-aria/ssr@^3.0.3", "@react-aria/ssr@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.npmmirror.com/@react-aria/ssr/download/@react-aria/ssr-3.1.0.tgz#b7163e6224725c30121932a8d1422ef91d1fab22"
-  integrity sha1-txY+YiRyXDASGTKo0UIu+R0fqyI=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-
-"@react-aria/tabs@3.0.0-alpha.2":
-  version "3.0.0-alpha.2"
-  resolved "https://registry.npmmirror.com/@react-aria/tabs/download/@react-aria/tabs-3.0.0-alpha.2.tgz#3b931d9c752c2dca4c2a1b975248b0ee751077a2"
-  integrity sha1-O5MdnHUsLcpMKhuXUkiw7nUQd6I=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/i18n" "^3.2.0"
-    "@react-aria/interactions" "^3.3.2"
-    "@react-aria/selection" "^3.3.1"
-    "@react-aria/utils" "^3.4.1"
-    "@react-stately/list" "^3.2.2"
-    "@react-stately/tabs" "3.0.0-alpha.0"
-    "@react-types/shared" "^3.2.1"
-    "@react-types/tabs" "3.0.0-alpha.2"
-
-"@react-aria/textfield@^3.5.0":
-  version "3.5.0"
-  resolved "https://registry.npmmirror.com/@react-aria/textfield/download/@react-aria/textfield-3.5.0.tgz#d711378e351b1374e6f11eda2896e6e481f0b0ba"
-  integrity sha512-EUsr5YCavNbp/nUoBCfiLiir0I0/NiZ2i/RPtOzzsGHMHw2xOME9PiRHYPrj7vOQQEfNgN1btr1psvLML4dk5w==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/focus" "^3.5.0"
-    "@react-aria/label" "^3.2.1"
-    "@react-aria/utils" "^3.10.0"
-    "@react-types/shared" "^3.10.0"
-    "@react-types/textfield" "^3.3.0"
-
-"@react-aria/toggle@^3.1.4":
-  version "3.1.5"
-  resolved "https://registry.npmmirror.com/@react-aria/toggle/download/@react-aria/toggle-3.1.5.tgz#dcb78c15fc45e241cbb4756c47fa323740ce5818"
-  integrity sha512-Oe6EpRxOJeXmKL9kD6LfoPRERLMj6Romx11KBEk7bkfO5zf8gm/NSmQCzN1h7SGRsUCkbCgVXPK63j5IlHK/Xw==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/focus" "^3.4.1"
-    "@react-aria/interactions" "^3.7.0"
-    "@react-aria/utils" "^3.10.0"
-    "@react-stately/toggle" "^3.2.3"
-    "@react-types/checkbox" "^3.2.3"
-    "@react-types/shared" "^3.10.0"
-    "@react-types/switch" "^3.1.2"
-
-"@react-aria/utils@^3.10.0", "@react-aria/utils@^3.11.0", "@react-aria/utils@^3.3.0", "@react-aria/utils@^3.4.1", "@react-aria/utils@^3.6.0", "@react-aria/utils@^3.8.2", "@react-aria/utils@^3.9.0":
-  version "3.11.0"
-  resolved "https://registry.npmmirror.com/@react-aria/utils/download/@react-aria/utils-3.11.0.tgz#215ea23a5435672a822cd713bdb8217972c5c80b"
-  integrity sha512-4yFA8E9xqDCUlolYSsoyp/qxrkiQrnEqx1BQOrKDuicpW7MBJ39pJC23YFMpyK2a6xEptc6xJEeIEFJXp57jJw==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/ssr" "^3.1.0"
-    "@react-stately/utils" "^3.3.0"
-    "@react-types/shared" "^3.10.1"
-    clsx "^1.1.1"
-
-"@react-aria/visually-hidden@^3.2.1", "@react-aria/visually-hidden@^3.2.3":
-  version "3.2.3"
-  resolved "https://registry.npmmirror.com/@react-aria/visually-hidden/download/@react-aria/visually-hidden-3.2.3.tgz#4779df0a468873550afb42a7f5fcb2411d82db8d"
-  integrity sha1-R3nfCkaIc1UK+0Kn9fyyQR2C240=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/interactions" "^3.5.1"
-    "@react-aria/utils" "^3.8.2"
-    clsx "^1.1.1"
-
-"@react-native-aria/button@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.npmmirror.com/@react-native-aria/button/download/@react-native-aria/button-0.2.4.tgz#ce0c994449011f4b852a222afd90e027fb839de0"
-  integrity sha1-zgyZREkBH0uFKiIq/ZDgJ/uDneA=
-  dependencies:
-    "@react-aria/utils" "^3.6.0"
-    "@react-native-aria/interactions" "^0.2.3"
-    "@react-stately/toggle" "^3.2.1"
-    "@react-types/checkbox" "^3.2.1"
-
-"@react-native-aria/checkbox@^0.2.2":
-  version "0.2.3"
-  resolved "https://registry.npmmirror.com/@react-native-aria/checkbox/download/@react-native-aria/checkbox-0.2.3.tgz#b6c99c215677df872f1bb4e596b54573f1c7a5f0"
-  integrity sha1-tsmcIVZ334cvG7TllrVFc/HHpfA=
-  dependencies:
-    "@react-aria/checkbox" "^3.2.1"
-    "@react-aria/utils" "^3.6.0"
-    "@react-native-aria/toggle" "^0.2.3"
-    "@react-native-aria/utils" "^0.2.6"
-    "@react-stately/toggle" "^3.2.1"
-
-"@react-native-aria/combobox@^0.2.4-alpha.0":
-  version "0.2.4-alpha.1"
-  resolved "https://registry.npmmirror.com/@react-native-aria/combobox/download/@react-native-aria/combobox-0.2.4-alpha.1.tgz#2ec7c5c2e87aba4dda62e494a4c3538066275e2b"
-  integrity sha1-LsfFwuh6uk3aYuSUpMNTgGYnXis=
-  dependencies:
-    "@react-aria/combobox" "^3.0.0-alpha.1"
-    "@react-aria/live-announcer" "^3.0.0-alpha.0"
-    "@react-aria/overlays" "^3.6.1"
-    "@react-aria/utils" "^3.6.0"
-    "@react-native-aria/utils" "^0.2.6"
-    "@react-types/button" "^3.3.1"
-
-"@react-native-aria/focus@^0.2.4":
-  version "0.2.5"
-  resolved "https://registry.npmmirror.com/@react-native-aria/focus/download/@react-native-aria/focus-0.2.5.tgz#28ff752b28b7dfeb737147856aaf6669de3290f9"
-  integrity sha1-KP91Kyi33+tzcUeFaq9mad4ykPk=
-  dependencies:
-    "@react-aria/focus" "^3.2.3"
-
-"@react-native-aria/interactions@^0.2.2", "@react-native-aria/interactions@^0.2.3", "@react-native-aria/interactions@^0.2.7":
-  version "0.2.8"
-  resolved "https://registry.npmmirror.com/@react-native-aria/interactions/download/@react-native-aria/interactions-0.2.8.tgz#5ced4bd3391c647699fa79275472f784a44c2488"
-  integrity sha1-XO1L0zkcZHaZ+nknVHL3hKRMJIg=
-  dependencies:
-    "@react-aria/interactions" "^3.3.2"
-    "@react-aria/utils" "^3.6.0"
-    "@react-native-aria/utils" "^0.2.6"
-
-"@react-native-aria/listbox@^0.2.4-alpha.3":
-  version "0.2.4-alpha.3"
-  resolved "https://registry.npmmirror.com/@react-native-aria/listbox/download/@react-native-aria/listbox-0.2.4-alpha.3.tgz#1a8df0de6c932c8143ea73e43713a5d37070203c"
-  integrity sha1-Go3w3myTLIFD6nPkNxOl03BwIDw=
-  dependencies:
-    "@react-aria/interactions" "^3.3.2"
-    "@react-aria/label" "^3.1.1"
-    "@react-aria/listbox" "^3.2.4"
-    "@react-aria/selection" "^3.3.2"
-    "@react-aria/utils" "^3.6.0"
-    "@react-native-aria/interactions" "^0.2.2"
-    "@react-native-aria/utils" "^0.2.6"
-    "@react-types/listbox" "^3.1.1"
-    "@react-types/shared" "^3.4.0"
-
-"@react-native-aria/overlays@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.npmmirror.com/@react-native-aria/overlays/download/@react-native-aria/overlays-0.3.2.tgz#fe3fb983b197738237493c3e5af6b30f6da6be9d"
-  integrity sha1-/j+5g7GXc4I3STw+WvazD22mvp0=
-  dependencies:
-    "@react-aria/interactions" "^3.3.2"
-    "@react-aria/overlays" "^3.7.0"
-    "@react-native-aria/utils" "^0.2.6"
-    "@react-stately/overlays" "^3.1.1"
-    "@react-types/overlays" "^3.4.0"
-    dom-helpers "^5.0.0"
-
-"@react-native-aria/radio@^0.2.4":
-  version "0.2.5"
-  resolved "https://registry.npmmirror.com/@react-native-aria/radio/download/@react-native-aria/radio-0.2.5.tgz#436d3abdbb48bcaf6e9c5c045ff9c5bf87b71248"
-  integrity sha1-Q206vbtIvK9unFwEX/nFv4e3Ekg=
-  dependencies:
-    "@react-aria/radio" "^3.1.2"
-    "@react-aria/utils" "^3.6.0"
-    "@react-native-aria/interactions" "^0.2.3"
-    "@react-native-aria/utils" "^0.2.6"
-    "@react-stately/radio" "^3.2.1"
-    "@react-types/radio" "^3.1.1"
-
-"@react-native-aria/slider@^0.2.5-alpha.1":
-  version "0.2.5-alpha.2"
-  resolved "https://registry.npmmirror.com/@react-native-aria/slider/download/@react-native-aria/slider-0.2.5-alpha.2.tgz#e613c2ac338de8d8ef8999ed664ea743174ee8da"
-  integrity sha1-5hPCrDON6NjviZntZk6nQxdO6No=
-  dependencies:
-    "@react-aria/focus" "^3.2.3"
-    "@react-aria/interactions" "^3.3.2"
-    "@react-aria/label" "^3.1.1"
-    "@react-aria/slider" "^3.0.1"
-    "@react-aria/utils" "^3.6.0"
-    "@react-native-aria/utils" "^0.2.6"
-    "@react-stately/slider" "^3.0.1"
-
-"@react-native-aria/tabs@^0.2.7":
-  version "0.2.8"
-  resolved "https://registry.npmmirror.com/@react-native-aria/tabs/download/@react-native-aria/tabs-0.2.8.tgz#8b721261a277fe0459154f70c25b81e23217c864"
-  integrity sha1-i3ISYaJ3/gRZFU9wwluB4jIXyGQ=
-  dependencies:
-    "@react-aria/selection" "^3.3.1"
-    "@react-aria/tabs" "3.0.0-alpha.2"
-    "@react-native-aria/interactions" "^0.2.7"
-    "@react-native-aria/utils" "^0.2.7"
-    "@react-stately/tabs" "3.0.0-alpha.1"
-    "@react-types/tabs" "3.0.0-alpha.2"
-
-"@react-native-aria/toggle@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.npmmirror.com/@react-native-aria/toggle/download/@react-native-aria/toggle-0.2.3.tgz#a387f03480aa0d97dc0191acbcae66122f7bcf7f"
-  integrity sha1-o4fwNICqDZfcAZGsvK5mEi97z38=
-  dependencies:
-    "@react-aria/focus" "^3.2.3"
-    "@react-aria/utils" "^3.6.0"
-    "@react-native-aria/interactions" "^0.2.3"
-    "@react-native-aria/utils" "^0.2.6"
-    "@react-stately/toggle" "^3.2.1"
-    "@react-types/checkbox" "^3.2.1"
-
-"@react-native-aria/utils@^0.2.6", "@react-native-aria/utils@^0.2.7", "@react-native-aria/utils@^0.2.8":
-  version "0.2.8"
-  resolved "https://registry.npmmirror.com/@react-native-aria/utils/download/@react-native-aria/utils-0.2.8.tgz#da433606506125483080f18dbcd97b526ca46fd5"
-  integrity sha1-2kM2BlBhJUgwgPGNvNl7Umykb9U=
-  dependencies:
-    "@react-aria/ssr" "^3.0.1"
-    "@react-aria/utils" "^3.3.0"
 
 "@react-native-async-storage/async-storage@^1.15.14":
   version "1.15.14"
@@ -1721,310 +1279,6 @@
   dependencies:
     nanoid "^3.1.23"
 
-"@react-stately/checkbox@^3.0.1", "@react-stately/checkbox@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmmirror.com/@react-stately/checkbox/download/@react-stately/checkbox-3.0.3.tgz#18ee6bd3b544334b6f853bb5c5f7017ac3bb9c37"
-  integrity sha1-GO5r07VEM0tvhTu1xfcBesO7nDc=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-stately/toggle" "^3.2.3"
-    "@react-stately/utils" "^3.2.2"
-    "@react-types/checkbox" "^3.2.3"
-
-"@react-stately/collections@^3.3.0", "@react-stately/collections@^3.3.3":
-  version "3.3.4"
-  resolved "https://registry.npmmirror.com/@react-stately/collections/download/@react-stately/collections-3.3.4.tgz#ca9e481d2769dbebb593d5a1ed4bcc54013aef9d"
-  integrity sha1-yp5IHSdp2+u1k9Wh7UvMVAE6750=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-types/shared" "^3.8.0"
-
-"@react-stately/combobox@^3.0.0-alpha.1", "@react-stately/combobox@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.npmmirror.com/@react-stately/combobox/download/@react-stately/combobox-3.0.1.tgz#b94f395ec751cfd038ee281032c9c5f3f86cb9a2"
-  integrity sha1-uU85XsdRz9A47igQMsnF8/hsuaI=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-stately/list" "^3.3.0"
-    "@react-stately/menu" "^3.2.3"
-    "@react-stately/select" "^3.1.3"
-    "@react-stately/utils" "^3.2.2"
-    "@react-types/combobox" "^3.0.1"
-    "@react-types/shared" "^3.8.0"
-
-"@react-stately/layout@^3.4.0":
-  version "3.4.2"
-  resolved "https://registry.npmmirror.com/@react-stately/layout/download/@react-stately/layout-3.4.2.tgz#a9d6258ee8a00a23327250f1dbc6724a7c4a0e81"
-  integrity sha1-qdYljuigCiMyclDx28ZySnxKDoE=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-stately/virtualizer" "^3.1.5"
-    "@react-types/grid" "^3.0.0"
-    "@react-types/shared" "^3.8.0"
-    "@react-types/table" "^3.0.0"
-
-"@react-stately/list@^3.2.2", "@react-stately/list@^3.3.0", "@react-stately/list@^3.4.0":
-  version "3.4.1"
-  resolved "https://registry.npmmirror.com/@react-stately/list/download/@react-stately/list-3.4.1.tgz#5dbe31340bcf4b69e063bf02f4e80aa827100983"
-  integrity sha512-M4uJij6gyBoyhbtj1AaiatVkQnb0sk43gnOYEDEZ7tMvq1QqS0+lXK5T8UWNQrygUUpwSMmMEcJJssmv5owTdg==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-stately/collections" "^3.3.3"
-    "@react-stately/selection" "^3.9.0"
-    "@react-stately/utils" "^3.3.0"
-    "@react-types/shared" "^3.10.1"
-
-"@react-stately/menu@^3.2.3":
-  version "3.2.3"
-  resolved "https://registry.npmmirror.com/@react-stately/menu/download/@react-stately/menu-3.2.3.tgz#eb58e3cfc941d49637bac04aa474935f08bc7215"
-  integrity sha1-61jjz8lB1JY3usBKpHSTXwi8chU=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-stately/overlays" "^3.1.3"
-    "@react-stately/utils" "^3.2.2"
-    "@react-types/menu" "^3.3.0"
-    "@react-types/shared" "^3.8.0"
-
-"@react-stately/overlays@^3.1.1", "@react-stately/overlays@^3.1.3":
-  version "3.1.3"
-  resolved "https://registry.npmmirror.com/@react-stately/overlays/download/@react-stately/overlays-3.1.3.tgz#b0bb4061c1b20e712dfc32c933ae4bb23e5ccc0e"
-  integrity sha1-sLtAYcGyDnEt/DLJM65Lsj5czA4=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-stately/utils" "^3.2.2"
-    "@react-types/overlays" "^3.5.1"
-
-"@react-stately/radio@^3.2.1", "@react-stately/radio@^3.3.2":
-  version "3.3.2"
-  resolved "https://registry.npmmirror.com/@react-stately/radio/download/@react-stately/radio-3.3.2.tgz#be489c1e7fe00fadff579776a2e2f4908fae029f"
-  integrity sha1-vkicHn/gD63/V5d2ouL0kI+uAp8=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-stately/utils" "^3.2.2"
-    "@react-types/radio" "^3.1.2"
-
-"@react-stately/select@^3.1.3":
-  version "3.1.3"
-  resolved "https://registry.npmmirror.com/@react-stately/select/download/@react-stately/select-3.1.3.tgz#539340e9ccdf8d0b331d289f18f1bb5c81ab3655"
-  integrity sha1-U5NA6czfjQszHSifGPG7XIGrNlU=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-stately/collections" "^3.3.3"
-    "@react-stately/list" "^3.3.0"
-    "@react-stately/menu" "^3.2.3"
-    "@react-stately/selection" "^3.7.0"
-    "@react-stately/utils" "^3.2.2"
-    "@react-types/select" "^3.3.1"
-    "@react-types/shared" "^3.8.0"
-
-"@react-stately/selection@^3.7.0", "@react-stately/selection@^3.9.0":
-  version "3.9.0"
-  resolved "https://registry.npmmirror.com/@react-stately/selection/download/@react-stately/selection-3.9.0.tgz#1aead3d1a34ccc1013bc8131e93dc04af07c3ee8"
-  integrity sha512-HT6//yALwPp1Mth1Xe26IG0jxTNIpX5BvVhpA9REKpnAIAtv9GK15ZPqDWcIabI+yW6/LI/Chey5Zk8dWDgdAg==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-stately/collections" "^3.3.3"
-    "@react-stately/utils" "^3.3.0"
-    "@react-types/shared" "^3.10.1"
-
-"@react-stately/slider@^3.0.1", "@react-stately/slider@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmmirror.com/@react-stately/slider/download/@react-stately/slider-3.0.3.tgz#77f85eb459d1542a74baf68ff545fcc569e5c309"
-  integrity sha1-d/hetFnRVCp0uvaP9UX8xWnlwwk=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/i18n" "^3.3.2"
-    "@react-aria/utils" "^3.8.2"
-    "@react-stately/utils" "^3.2.2"
-    "@react-types/slider" "^3.0.2"
-
-"@react-stately/tabs@3.0.0-alpha.0":
-  version "3.0.0-alpha.0"
-  resolved "https://registry.npmmirror.com/@react-stately/tabs/download/@react-stately/tabs-3.0.0-alpha.0.tgz#41451c7957ab2773fc4edb78ec02fcb94c6ab226"
-  integrity sha1-QUUceVerJ3P8Ttt47AL8uUxqsiY=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-stately/list" "^3.2.2"
-    "@react-stately/utils" "^3.0.0-alpha.1"
-    "@react-types/tabs" "3.0.0-alpha.2"
-
-"@react-stately/tabs@3.0.0-alpha.1":
-  version "3.0.0-alpha.1"
-  resolved "https://registry.npmmirror.com/@react-stately/tabs/download/@react-stately/tabs-3.0.0-alpha.1.tgz#b166ca9733ebebcc3bb2223116b8b070af104812"
-  integrity sha1-sWbKlzPr68w7siIxFriwcK8QSBI=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-stately/list" "^3.2.2"
-    "@react-stately/utils" "^3.2.0"
-    "@react-types/tabs" "3.0.0-alpha.2"
-
-"@react-stately/tabs@^3.0.0-alpha.1":
-  version "3.0.1"
-  resolved "https://registry.npmmirror.com/@react-stately/tabs/download/@react-stately/tabs-3.0.1.tgz#7df000f8c5c14b3bf973348c491e12bcfcafe49d"
-  integrity sha1-ffAA+MXBSzv5czSMSR4SvPyv5J0=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-stately/list" "^3.3.0"
-    "@react-stately/utils" "^3.2.2"
-    "@react-types/tabs" "^3.0.1"
-
-"@react-stately/toggle@^3.2.1", "@react-stately/toggle@^3.2.3":
-  version "3.2.3"
-  resolved "https://registry.npmmirror.com/@react-stately/toggle/download/@react-stately/toggle-3.2.3.tgz#a4de6edc16982990492c6c557e5194f46dacc809"
-  integrity sha1-pN5u3BaYKZBJLGxVflGU9G2syAk=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-stately/utils" "^3.2.2"
-    "@react-types/checkbox" "^3.2.3"
-    "@react-types/shared" "^3.8.0"
-
-"@react-stately/tree@^3.2.0":
-  version "3.2.0"
-  resolved "https://registry.npmmirror.com/@react-stately/tree/download/@react-stately/tree-3.2.0.tgz#151c90f161c5c8339b6876f59a4f0502be08670b"
-  integrity sha1-FRyQ8WHFyDObaHb1mk8FAr4IZws=
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-stately/collections" "^3.3.3"
-    "@react-stately/selection" "^3.7.0"
-    "@react-stately/utils" "^3.2.2"
-    "@react-types/shared" "^3.8.0"
-
-"@react-stately/utils@^3.0.0-alpha.1", "@react-stately/utils@^3.2.0", "@react-stately/utils@^3.2.2", "@react-stately/utils@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.npmmirror.com/@react-stately/utils/download/@react-stately/utils-3.3.0.tgz#99866c5788539268a06035acd5925b25bb4cedde"
-  integrity sha512-f//Y8q0+FFcS04xvCNvbba7WWRLHzj2AegLgdgwTxsnk9Gb+AyuasdRrRY7bGQhdHuEJ7OIiQZ9EQWndDbrTcg==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-
-"@react-stately/virtualizer@^3.1.5":
-  version "3.1.6"
-  resolved "https://registry.npmmirror.com/@react-stately/virtualizer/download/@react-stately/virtualizer-3.1.6.tgz#df803dbe032b73244b1d2f5cf09ac0ec9fcd9d04"
-  integrity sha512-7ZgLa6L3c4um6oXOFhOGVytDJOjzxeD+OfQmL1Ly5WpDn++0EdYBA56PD38Umx8Lcjw+3OoMQyiZVKgLoR0Qtg==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-    "@react-aria/utils" "^3.10.0"
-    "@react-types/shared" "^3.10.0"
-
-"@react-types/button@^3.3.1", "@react-types/button@^3.4.1":
-  version "3.4.1"
-  resolved "https://registry.npmmirror.com/@react-types/button/download/@react-types/button-3.4.1.tgz#715ac9d4997c79233be4d9020b58f85936b8252b"
-  integrity sha1-cVrJ1Jl8eSM75NkCC1j4WTa4JSs=
-  dependencies:
-    "@react-types/shared" "^3.8.0"
-
-"@react-types/checkbox@^3.2.1", "@react-types/checkbox@^3.2.3":
-  version "3.2.3"
-  resolved "https://registry.npmmirror.com/@react-types/checkbox/download/@react-types/checkbox-3.2.3.tgz#2b9d529c55c9884519c7f626f0fe8be7d0f18be1"
-  integrity sha1-K51SnFXJiEUZx/Ym8P6L59Dxi+E=
-  dependencies:
-    "@react-types/shared" "^3.8.0"
-
-"@react-types/combobox@^3.0.1", "@react-types/combobox@^3.2.1":
-  version "3.2.1"
-  resolved "https://registry.npmmirror.com/@react-types/combobox/download/@react-types/combobox-3.2.1.tgz#6947e67df67957d9f82a8072106045308a9ec1ed"
-  integrity sha512-YBlbIK7von3A+cS4mq2bqknp87O+pmyuJ4KDIpVu9keogeUtEpqfo1iW9+iEKBAK8bTI6MQW2Z7oaEHLDRMIMw==
-  dependencies:
-    "@react-types/shared" "^3.10.1"
-
-"@react-types/grid@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.npmmirror.com/@react-types/grid/download/@react-types/grid-3.0.0.tgz#a69446e4f99623102339b1351701c371a0c95323"
-  integrity sha1-ppRG5PmWIxAjObE1FwHDcaDJUyM=
-  dependencies:
-    "@react-types/shared" "^3.8.0"
-
-"@react-types/label@^3.5.0":
-  version "3.5.0"
-  resolved "https://registry.npmmirror.com/@react-types/label/download/@react-types/label-3.5.0.tgz#c7093871f42c62e1b5523f61a0856a2f58d4cf2a"
-  integrity sha1-xwk4cfQsYuG1Uj9hoIVqL1jUzyo=
-  dependencies:
-    "@react-types/shared" "^3.9.0"
-
-"@react-types/listbox@^3.1.1", "@react-types/listbox@^3.2.1":
-  version "3.2.1"
-  resolved "https://registry.npmmirror.com/@react-types/listbox/download/@react-types/listbox-3.2.1.tgz#881bbc9690343f35fe08a99526a90618f53328bf"
-  integrity sha1-iBu8lpA0PzX+CKmVJqkGGPUzKL8=
-  dependencies:
-    "@react-types/shared" "^3.8.0"
-
-"@react-types/menu@^3.3.0":
-  version "3.4.1"
-  resolved "https://registry.npmmirror.com/@react-types/menu/download/@react-types/menu-3.4.1.tgz#42f58ce3b79b844441627c5cd3126705b3b00063"
-  integrity sha1-QvWM47ebhERBYnxc0xJnBbOwAGM=
-  dependencies:
-    "@react-types/overlays" "^3.5.1"
-    "@react-types/shared" "^3.9.0"
-
-"@react-types/overlays@^3.4.0", "@react-types/overlays@^3.5.1":
-  version "3.5.1"
-  resolved "https://registry.npmmirror.com/@react-types/overlays/download/@react-types/overlays-3.5.1.tgz#35350dfca639d04a8fbd973de59b141450df1b46"
-  integrity sha1-NTUN/KY50EqPvZc95ZsUFFDfG0Y=
-  dependencies:
-    "@react-types/shared" "^3.8.0"
-
-"@react-types/radio@^3.1.1", "@react-types/radio@^3.1.2":
-  version "3.1.2"
-  resolved "https://registry.npmmirror.com/@react-types/radio/download/@react-types/radio-3.1.2.tgz#a2a6aed62c0036b9c3647edd9ce944aa80624346"
-  integrity sha1-oqau1iwANrnDZH7dnOlEqoBiQ0Y=
-  dependencies:
-    "@react-types/shared" "^3.8.0"
-
-"@react-types/select@^3.3.1":
-  version "3.5.1"
-  resolved "https://registry.npmmirror.com/@react-types/select/download/@react-types/select-3.5.1.tgz#4cc472143534ccd79ce0c162c0481de65cf466cb"
-  integrity sha512-aDLwIx3NOiSnnhCGxWyBIE7j+tLsZx8n5mUL2T8a+UJc38iPXtWEu042nFUpFAMyQOIEvmB58Y4Xy9LoDPRj1w==
-  dependencies:
-    "@react-types/shared" "^3.10.1"
-
-"@react-types/shared@^3.10.0", "@react-types/shared@^3.10.1", "@react-types/shared@^3.2.1", "@react-types/shared@^3.4.0", "@react-types/shared@^3.8.0", "@react-types/shared@^3.9.0":
-  version "3.10.1"
-  resolved "https://registry.npmmirror.com/@react-types/shared/download/@react-types/shared-3.10.1.tgz#16cd3038361dee63f351fa4d0fd25d90480a149b"
-  integrity sha512-U3dLJtstvOiZ8XLrWdNv9WXuruoDyfIfSXguTs9N0naDdO+M0MIbt/1Hg7Toe43ueAe56GM14IFL+S0/jhv8ow==
-
-"@react-types/slider@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.npmmirror.com/@react-types/slider/download/@react-types/slider-3.0.2.tgz#81313a14caa30ee27feeb66a50a3854a6923ca56"
-  integrity sha1-gTE6FMqjDuJ/7rZqUKOFSmkjylY=
-  dependencies:
-    "@react-types/shared" "^3.8.0"
-
-"@react-types/switch@^3.1.2":
-  version "3.1.2"
-  resolved "https://registry.npmmirror.com/@react-types/switch/download/@react-types/switch-3.1.2.tgz#f7015e5e66035c9ae517966842a4f9e5d589fa26"
-  integrity sha1-9wFeXmYDXJrlF5ZoQqT55dWJ+iY=
-  dependencies:
-    "@react-types/checkbox" "^3.2.3"
-    "@react-types/shared" "^3.8.0"
-
-"@react-types/table@^3.0.0":
-  version "3.1.0"
-  resolved "https://registry.npmmirror.com/@react-types/table/download/@react-types/table-3.1.0.tgz#ff0b73bc79f38dc00834edeade9492e98da52b8f"
-  integrity sha512-sJdD5SY6gn5vk6adfjbnlTOXKy606mHFojBeRWqYHMEMcv29GOmVqMF45kYeETRJXPPmXKk04Jvf53FpukcNPQ==
-  dependencies:
-    "@react-types/grid" "^3.0.0"
-    "@react-types/shared" "^3.10.0"
-
-"@react-types/tabs@3.0.0-alpha.2":
-  version "3.0.0-alpha.2"
-  resolved "https://registry.npmmirror.com/@react-types/tabs/download/@react-types/tabs-3.0.0-alpha.2.tgz#f18c71f4843ae2117b41fdb012f89cc2dd43adf4"
-  integrity sha1-8Yxx9IQ64hF7Qf2wEvicwt1DrfQ=
-  dependencies:
-    "@react-types/shared" "^3.2.1"
-
-"@react-types/tabs@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.npmmirror.com/@react-types/tabs/download/@react-types/tabs-3.0.1.tgz#a32931e95303d4442e51d4c687d4e154654014f6"
-  integrity sha1-oykx6VMD1EQuUdTGh9ThVGVAFPY=
-  dependencies:
-    "@react-types/shared" "^3.8.0"
-
-"@react-types/textfield@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.npmmirror.com/@react-types/textfield/download/@react-types/textfield-3.3.0.tgz#07a447fda327df4843e7d36cbd00f87f8a73e725"
-  integrity sha1-B6RH/aMn30hD59NsvQD4f4pz5yU=
-  dependencies:
-    "@react-types/shared" "^3.9.0"
-
 "@reduxjs/toolkit@^1.7.1":
   version "1.7.1"
   resolved "https://registry.npmmirror.com/@reduxjs/toolkit/download/@reduxjs/toolkit-1.7.1.tgz#994962aeb7df3c77be343dd2ad1aa48221dbaa0c"
@@ -2165,18 +1419,6 @@
   version "7.0.9"
   resolved "https://registry.npmmirror.com/@types/json-schema/download/@types/json-schema-7.0.9.tgz?cache=0&sync_timestamp=1637272027260&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fjson-schema%2Fdownload%2F%40types%2Fjson-schema-7.0.9.tgz"
   integrity "sha1-l+3JA36gw4WFMgsolk3eOznkZg0= sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ=="
-
-"@types/lodash.has@^4.5.6":
-  version "4.5.6"
-  resolved "https://registry.npmmirror.com/@types/lodash.has/download/@types/lodash.has-4.5.6.tgz#d94d3f0b45ced2ae76d632080daf70e9b76e29eb"
-  integrity sha1-2U0/C0XO0q521jIIDa9w6bduKes=
-  dependencies:
-    "@types/lodash" "*"
-
-"@types/lodash@*":
-  version "4.14.178"
-  resolved "https://registry.npmmirror.com/@types/lodash/download/@types/lodash-4.14.178.tgz#341f6d2247db528d4a13ddbb374bcdc80406f4f8"
-  integrity sha512-0d5Wd09ItQWH1qFbEyQ7oTQ3GZrMfth5JkbN3EvTKLXcHLRDSXeLnlvlOn0wvxVIwK5o2M8JzP/OWz7T3NRsbw==
 
 "@types/node@*":
   version "16.11.13"
@@ -2319,11 +1561,6 @@
   integrity "sha1-zUJ0dz4+tjsuhwrGAidEh+zR6TE= sha512-9JgC82AaQeglebjZMgYR5wgmfUdUc+EitGUUMW8u2nDckaeimzW+VsoLV6FoimPv2id3VQzfjwBxEMVz08ameQ=="
   dependencies:
     eslint-visitor-keys "^1.1.0"
-
-"@yarnpkg/lockfile@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.nlark.com/@yarnpkg/lockfile/download/@yarnpkg/lockfile-1.1.0.tgz#e77a97fbd345b76d83245edcd17d393b1b41fb31"
-  integrity sha1-53qX+9NFt22DJF7c0X05OxtB+zE=
 
 abab@^2.0.3, abab@^2.0.5:
   version "2.0.5"
@@ -2762,11 +1999,6 @@ big-integer@1.6.x:
   resolved "https://registry.npmmirror.com/big-integer/download/big-integer-1.6.51.tgz"
   integrity sha512-GPEid2Y9QU1Exl1rpO9B2IPJGHPSupF5GnVIP0blYvNOMer2bTvSWs1jGOUg04hTmu67nmLsQ9TBo1puaotBHg==
 
-boolbase@^1.0.0, boolbase@~1.0.0:
-  version "1.0.0"
-  resolved "https://registry.nlark.com/boolbase/download/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
-  integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
-
 bplist-creator@0.1.0:
   version "0.1.0"
   resolved "https://registry.nlark.com/bplist-creator/download/bplist-creator-0.1.0.tgz"
@@ -2991,11 +2223,6 @@ clone@^1.0.2:
   resolved "https://registry.nlark.com/clone/download/clone-1.0.4.tgz?cache=0&sync_timestamp=1618759542799&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fclone%2Fdownload%2Fclone-1.0.4.tgz"
   integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
 
-clsx@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.nlark.com/clsx/download/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
-  integrity sha1-mLMTT5q73yOyZjSRrOE8XAOnMYg=
-
 co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.nlark.com/co/download/co-4.6.0.tgz"
@@ -3166,7 +2393,7 @@ cosmiconfig@^5.0.5, cosmiconfig@^5.1.0:
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
-cross-spawn@^6.0.0, cross-spawn@^6.0.5:
+cross-spawn@^6.0.0:
   version "6.0.5"
   resolved "https://registry.nlark.com/cross-spawn/download/cross-spawn-6.0.5.tgz?cache=0&sync_timestamp=1618759923579&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcross-spawn%2Fdownload%2Fcross-spawn-6.0.5.tgz"
   integrity "sha1-Sl7Hxk364iw6FBJNus3uhG2Ay8Q= sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ=="
@@ -3185,29 +2412,6 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.2:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
     which "^2.0.1"
-
-css-select@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.npmmirror.com/css-select/download/css-select-2.1.0.tgz#6a34653356635934a81baca68d0255432105dbef"
-  integrity sha1-ajRlM1ZjWTSoG6ymjQJVQyEF2+8=
-  dependencies:
-    boolbase "^1.0.0"
-    css-what "^3.2.1"
-    domutils "^1.7.0"
-    nth-check "^1.0.2"
-
-css-tree@^1.0.0-alpha.39:
-  version "1.1.3"
-  resolved "https://registry.npmmirror.com/css-tree/download/css-tree-1.1.3.tgz#eb4870fb6fd7707327ec95c2ff2ab09b5e8db91d"
-  integrity sha1-60hw+2/XcHMn7JXC/yqwm16NuR0=
-  dependencies:
-    mdn-data "2.0.14"
-    source-map "^0.6.1"
-
-css-what@^3.2.1:
-  version "3.4.2"
-  resolved "https://registry.npmmirror.com/css-what/download/css-what-3.4.2.tgz#ea7026fcb01777edbde52124e21f327e7ae950e4"
-  integrity sha1-6nAm/LAXd+295SEk4h8yfnrpUOQ=
 
 cssom@^0.4.4:
   version "0.4.4"
@@ -3374,53 +2578,12 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-dom-helpers@^3.3.1:
-  version "3.4.0"
-  resolved "https://registry.nlark.com/dom-helpers/download/dom-helpers-3.4.0.tgz#e9b369700f959f62ecde5a6babde4bccd9169af8"
-  integrity sha1-6bNpcA+Vn2Ls3lprq95LzNkWmvg=
-  dependencies:
-    "@babel/runtime" "^7.1.2"
-
-dom-helpers@^5.0.0:
-  version "5.2.1"
-  resolved "https://registry.nlark.com/dom-helpers/download/dom-helpers-5.2.1.tgz#d9400536b2bf8225ad98fe052e029451ac40e902"
-  integrity sha1-2UAFNrK/giWtmP4FLgKUUaxA6QI=
-  dependencies:
-    "@babel/runtime" "^7.8.7"
-    csstype "^3.0.2"
-
-dom-serializer@0:
-  version "0.2.2"
-  resolved "https://registry.nlark.com/dom-serializer/download/dom-serializer-0.2.2.tgz?cache=0&sync_timestamp=1621256889702&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fdom-serializer%2Fdownload%2Fdom-serializer-0.2.2.tgz#1afb81f533717175d478655debc5e332d9f9bb51"
-  integrity sha1-GvuB9TNxcXXUeGVd68XjMtn5u1E=
-  dependencies:
-    domelementtype "^2.0.1"
-    entities "^2.0.0"
-
-domelementtype@1:
-  version "1.3.1"
-  resolved "https://registry.nlark.com/domelementtype/download/domelementtype-1.3.1.tgz#d048c44b37b0d10a7f2a3d5fee3f4333d790481f"
-  integrity sha1-0EjESzew0Qp/Kj1f7j9DM9eQSB8=
-
-domelementtype@^2.0.1:
-  version "2.2.0"
-  resolved "https://registry.nlark.com/domelementtype/download/domelementtype-2.2.0.tgz#9a0b6c2782ed6a1c7323d42267183df9bd8b1d57"
-  integrity sha1-mgtsJ4LtahxzI9QiZxg9+b2LHVc=
-
 domexception@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmmirror.com/domexception/download/domexception-2.0.1.tgz?cache=0&sync_timestamp=1633539011587&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fdomexception%2Fdownload%2Fdomexception-2.0.1.tgz"
   integrity "sha1-+0Su+6eT4VdLCvau0oAdBXUp8wQ= sha512-yxJ2mFy/sibVQlu5qHjOkf9J3K6zgmCxgJ94u2EdvDOV09H+32LtRswEcUsmUWN72pVLOEnTSRaIVVzVQgS0dg=="
   dependencies:
     webidl-conversions "^5.0.0"
-
-domutils@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.nlark.com/domutils/download/domutils-1.7.0.tgz#56ea341e834e06e6748af7a1cb25da67ea9f8c2a"
-  integrity sha1-Vuo0HoNOBuZ0ivehyyXaZ+qfjCo=
-  dependencies:
-    dom-serializer "0"
-    domelementtype "1"
 
 ee-first@1.1.1:
   version "1.1.1"
@@ -3460,11 +2623,6 @@ enquirer@^2.3.5:
   integrity "sha1-Kn/l3WNKHkElqXXsmU/1RW3Dc00= sha512-yjNnPr315/FjS4zIsUxYguYUPP2e1NK4d7E7ZOLiyYCcbFBiTMyID+2wvm2w6+pZ/odMA7cRkjhsPbltwBOrLg=="
   dependencies:
     ansi-colors "^4.1.1"
-
-entities@^2.0.0:
-  version "2.2.0"
-  resolved "https://registry.nlark.com/entities/download/entities-2.2.0.tgz?cache=0&sync_timestamp=1628508587045&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fentities%2Fdownload%2Fentities-2.2.0.tgz#098dc90ebb83d8dffa089d55256b351d34c4da55"
-  integrity sha1-CY3JDruD2N/6CJ1VJWs1HTTE2lU=
 
 envinfo@^7.7.2:
   version "7.8.1"
@@ -3946,13 +3104,6 @@ find-up@^4.0.0, find-up@^4.1.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-find-yarn-workspace-root@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.nlark.com/find-yarn-workspace-root/download/find-yarn-workspace-root-2.0.0.tgz#f47fb8d239c900eb78179aa81b66673eac88f7bd"
-  integrity sha1-9H+40jnJAOt4F5qoG2ZnPqyI970=
-  dependencies:
-    micromatch "^4.0.2"
-
 flat-cache@^3.0.4:
   version "3.0.4"
   resolved "https://registry.nlark.com/flat-cache/download/flat-cache-3.0.4.tgz"
@@ -4005,15 +3156,6 @@ fs-extra@^1.0.0:
     graceful-fs "^4.1.2"
     jsonfile "^2.1.0"
     klaw "^1.0.0"
-
-fs-extra@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.nlark.com/fs-extra/download/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
-  integrity sha1-TxicRKoSO4lfcigE9V6iPq3DSOk=
-  dependencies:
-    graceful-fs "^4.1.2"
-    jsonfile "^4.0.0"
-    universalify "^0.1.0"
 
 fs-extra@^8.1.0:
   version "8.1.0"
@@ -4363,16 +3505,6 @@ internal-slot@^1.0.3:
     has "^1.0.3"
     side-channel "^1.0.4"
 
-intl-messageformat@^9.6.12:
-  version "9.11.3"
-  resolved "https://registry.npmmirror.com/intl-messageformat/download/intl-messageformat-9.11.3.tgz#e9b26b582891ff0fca327a9ddcb2caf6d26c84e7"
-  integrity sha512-sFOaEw2cytBASTsJkfVod8IJzTx9oOPdU0C7jzprfGATn22FjQGJ60UCyCkKJo6UW+NnpKpwBjO73Pnhvv6HHg==
-  dependencies:
-    "@formatjs/ecma402-abstract" "1.11.2"
-    "@formatjs/fast-memoize" "1.2.1"
-    "@formatjs/icu-messageformat-parser" "2.0.17"
-    tslib "^2.1.0"
-
 invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.nlark.com/invariant/download/invariant-2.2.4.tgz"
@@ -4636,7 +3768,7 @@ is-wsl@^1.1.0:
   resolved "https://registry.nlark.com/is-wsl/download/is-wsl-1.1.0.tgz"
   integrity sha1-HxbkqiKwTRM2tmGIpmrzxgDDpm0=
 
-is-wsl@^2.1.1, is-wsl@^2.2.0:
+is-wsl@^2.2.0:
   version "2.2.0"
   resolved "https://registry.nlark.com/is-wsl/download/is-wsl-2.2.0.tgz"
   integrity "sha1-dKTHbnfKn9P5MvKQwX6jJs0VcnE= sha512-fKzAra0rGJUUBwGBgNkHZuToZcn+TtXHpeCgmkMJMMYx1sQDYaCSyjJBSCa2nH1DGm7s3n1oBnohoVTBaN7Lww=="
@@ -5280,13 +4412,6 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.nlark.com/kind-of/download/kind-of-6.0.3.tgz"
   integrity "sha1-B8BQNKbDSfoG4k+jWqdttFgM5N0= sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw=="
 
-klaw-sync@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.nlark.com/klaw-sync/download/klaw-sync-6.0.0.tgz#1fd2cfd56ebb6250181114f0a581167099c2b28c"
-  integrity sha1-H9LP1W67YlAYERTwpYEWcJnCsow=
-  dependencies:
-    graceful-fs "^4.1.11"
-
 klaw@^1.0.0:
   version "1.3.1"
   resolved "https://registry.nlark.com/klaw/download/klaw-1.3.1.tgz?cache=0&sync_timestamp=1631978058633&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fklaw%2Fdownload%2Fklaw-1.3.1.tgz"
@@ -5340,65 +4465,20 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
-lodash.clonedeep@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.npmmirror.com/lodash.clonedeep/download/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
-  integrity sha512-H5ZhCF25riFd9uB5UCkVKo61m3S/xZk1x4wA6yp/L3RFP6Z/eHH1ymQcGLo7J3GMPfm0V/7m1tryHuGVxpqEBQ==
-
 lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.nlark.com/lodash.debounce/download/lodash.debounce-4.0.8.tgz"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
-
-lodash.get@^4.4.2:
-  version "4.4.2"
-  resolved "https://registry.npmmirror.com/lodash.get/download/lodash.get-4.4.2.tgz?cache=0&sync_timestamp=1637237873240&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Flodash.get%2Fdownload%2Flodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
-  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
-
-lodash.has@^4.5.2:
-  version "4.5.2"
-  resolved "https://registry.nlark.com/lodash.has/download/lodash.has-4.5.2.tgz#d19f4dc1095058cccbe2b0cdf4ee0fe4aa37c862"
-  integrity sha1-0Z9NwQlQWMzL4rDN9O4P5Ko3yGI=
-
-lodash.isempty@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.npmmirror.com/lodash.isempty/download/lodash.isempty-4.4.0.tgz#6f86cbedd8be4ec987be9aaf33c9684db1b31e7e"
-  integrity sha512-oKMuF3xEeqDltrGMfDxAPGIVMSSRv8tbRSODbrs4KGsRRLEhrW8N8Rd4DRgB2+621hY8A8XwwrTVhXWpxFvMzg==
 
 lodash.isequal@^4.5.0:
   version "4.5.0"
   resolved "https://registry.nlark.com/lodash.isequal/download/lodash.isequal-4.5.0.tgz"
   integrity "sha1-QVxEePK8wwEgwizhDtMib30+GOA= sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ=="
 
-lodash.isnil@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmmirror.com/lodash.isnil/download/lodash.isnil-4.0.0.tgz#49e28cd559013458c814c5479d3c663a21bfaa6c"
-  integrity sha512-up2Mzq3545mwVnMhTDMdfoG1OurpA/s5t88JmQX809eH3C8491iu2sfKhTfhQtKY78oPNhiaHJUpT/dUDAAtng==
-
 lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.nlark.com/lodash.merge/download/lodash.merge-4.6.2.tgz"
   integrity "sha1-VYqlO0O2YeGSWgr9+japoQhf5Xo= sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ=="
-
-lodash.mergewith@^4.6.2:
-  version "4.6.2"
-  resolved "https://registry.npmmirror.com/lodash.mergewith/download/lodash.mergewith-4.6.2.tgz#617121f89ac55f59047c7aec1ccd6654c6590f55"
-  integrity sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==
-
-lodash.omit@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.nlark.com/lodash.omit/download/lodash.omit-4.5.0.tgz#6eb19ae5a1ee1dd9df0b969e66ce0b7fa30b5e60"
-  integrity sha1-brGa5aHuHdnfC5aeZs4Lf6MLXmA=
-
-lodash.omitby@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.nlark.com/lodash.omitby/download/lodash.omitby-4.6.0.tgz#5c15ff4754ad555016b53c041311e8f079204791"
-  integrity sha1-XBX/R1StVVAWtTwEExHo8HkgR5E=
-
-lodash.pick@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.npmmirror.com/lodash.pick/download/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
-  integrity sha1-UvBWEP/53tQiYRRB7R/BI6AwAbM=
 
 lodash.throttle@^4.1.1:
   version "4.1.1"
@@ -5478,11 +4558,6 @@ map-visit@^1.0.0:
   integrity sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
   dependencies:
     object-visit "^1.0.0"
-
-mdn-data@2.0.14:
-  version "2.0.14"
-  resolved "https://registry.npmmirror.com/mdn-data/download/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
-  integrity sha1-cRP8QoGRfWPOKbQ0RvcB5owlulA=
 
 merge-options@^3.0.4:
   version "3.0.4"
@@ -5890,49 +4965,6 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-native-base@^3.3.4:
-  version "3.3.4"
-  resolved "https://registry.npmmirror.com/native-base/download/native-base-3.3.4.tgz#90fa05172be9f2b70f894a751bbfe11dc0960b3c"
-  integrity sha512-fbyZTV8Htk96aL7pE6alkydkslVsGv7uUrCrfyH1c8YXYv2/SzIrnXKjwtcgvt2Z9ydVGN7WGxxaygsjxYjkrw==
-  dependencies:
-    "@react-aria/focus" "^3.2.3"
-    "@react-aria/utils" "^3.6.0"
-    "@react-aria/visually-hidden" "^3.2.1"
-    "@react-native-aria/button" "^0.2.4"
-    "@react-native-aria/checkbox" "^0.2.2"
-    "@react-native-aria/combobox" "^0.2.4-alpha.0"
-    "@react-native-aria/focus" "^0.2.4"
-    "@react-native-aria/interactions" "^0.2.2"
-    "@react-native-aria/listbox" "^0.2.4-alpha.3"
-    "@react-native-aria/overlays" "^0.3.2"
-    "@react-native-aria/radio" "^0.2.4"
-    "@react-native-aria/slider" "^0.2.5-alpha.1"
-    "@react-native-aria/tabs" "^0.2.7"
-    "@react-native-aria/utils" "^0.2.8"
-    "@react-stately/checkbox" "^3.0.1"
-    "@react-stately/collections" "^3.3.0"
-    "@react-stately/combobox" "^3.0.0-alpha.1"
-    "@react-stately/radio" "^3.2.1"
-    "@react-stately/slider" "^3.0.1"
-    "@react-stately/tabs" "^3.0.0-alpha.1"
-    "@react-stately/toggle" "^3.2.1"
-    "@types/lodash.has" "^4.5.6"
-    lodash.clonedeep "^4.5.0"
-    lodash.get "^4.4.2"
-    lodash.has "^4.5.2"
-    lodash.isempty "^4.4.0"
-    lodash.isequal "^4.5.0"
-    lodash.isnil "^4.0.0"
-    lodash.merge "^4.6.2"
-    lodash.mergewith "^4.6.2"
-    lodash.omit "^4.5.0"
-    lodash.omitby "^4.6.0"
-    lodash.pick "^4.4.0"
-    patch-package "^6.4.7"
-    react-native-keyboard-aware-scroll-view "^0.9.5"
-    stable-hash "^0.0.2"
-    tinycolor2 "^1.4.2"
-
 natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.nlark.com/natural-compare/download/natural-compare-1.4.0.tgz"
@@ -6034,13 +5066,6 @@ npm-run-path@^4.0.0:
   integrity "sha1-t+zR5e1T2o43pV4cImnguX7XSOo= sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw=="
   dependencies:
     path-key "^3.0.0"
-
-nth-check@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.nlark.com/nth-check/download/nth-check-1.0.2.tgz#b2bd295c37e3dd58a3bf0700376663ba4d9cf05c"
-  integrity sha1-sr0pXDfj3VijvwcAN2Zjuk2c8Fw=
-  dependencies:
-    boolbase "~1.0.0"
 
 nullthrows@^1.1.1:
   version "1.1.1"
@@ -6180,14 +5205,6 @@ open@^6.2.0:
   dependencies:
     is-wsl "^1.1.0"
 
-open@^7.4.2:
-  version "7.4.2"
-  resolved "https://registry.npmmirror.com/open/download/open-7.4.2.tgz#b8147e26dcf3e426316c730089fd71edd29c2321"
-  integrity sha1-uBR+Jtzz5CYxbHMAif1x7dKcIyE=
-  dependencies:
-    is-docker "^2.0.0"
-    is-wsl "^2.1.1"
-
 optionator@^0.8.1:
   version "0.8.3"
   resolved "https://registry.nlark.com/optionator/download/optionator-0.8.3.tgz"
@@ -6229,7 +5246,7 @@ ora@^3.4.0:
     strip-ansi "^5.2.0"
     wcwidth "^1.0.1"
 
-os-tmpdir@^1.0.0, os-tmpdir@~1.0.2:
+os-tmpdir@^1.0.0:
   version "1.0.2"
   resolved "https://registry.nlark.com/os-tmpdir/download/os-tmpdir-1.0.2.tgz"
   integrity sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
@@ -6309,25 +5326,6 @@ pascalcase@^0.1.1:
   version "0.1.1"
   resolved "https://registry.nlark.com/pascalcase/download/pascalcase-0.1.1.tgz"
   integrity sha1-s2PlXoAGym/iF4TS2yK9FdeRfxQ=
-
-patch-package@^6.4.7:
-  version "6.4.7"
-  resolved "https://registry.nlark.com/patch-package/download/patch-package-6.4.7.tgz#2282d53c397909a0d9ef92dae3fdeb558382b148"
-  integrity sha1-IoLVPDl5CaDZ75La4/3rVYOCsUg=
-  dependencies:
-    "@yarnpkg/lockfile" "^1.1.0"
-    chalk "^2.4.2"
-    cross-spawn "^6.0.5"
-    find-yarn-workspace-root "^2.0.0"
-    fs-extra "^7.0.1"
-    is-ci "^2.0.0"
-    klaw-sync "^6.0.0"
-    minimist "^1.2.0"
-    open "^7.4.2"
-    rimraf "^2.6.3"
-    semver "^5.6.0"
-    slash "^2.0.0"
-    tmp "^0.0.33"
 
 path-exists@^3.0.0:
   version "3.0.0"
@@ -6470,7 +5468,7 @@ prompts@^2.0.1, prompts@^2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.5.10, prop-types@^15.6.2:
+prop-types@^15.5.10:
   version "15.8.1"
   resolved "https://registry.npmmirror.com/prop-types/download/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -6581,19 +5579,6 @@ react-native-gesture-handler@^2.1.0:
     lodash "^4.17.21"
     prop-types "^15.7.2"
 
-react-native-iphone-x-helper@^1.0.3:
-  version "1.3.1"
-  resolved "https://registry.nlark.com/react-native-iphone-x-helper/download/react-native-iphone-x-helper-1.3.1.tgz#20c603e9a0e765fd6f97396638bdeb0e5a60b010"
-  integrity sha1-IMYD6aDnZf1vlzlmOL3rDlpgsBA=
-
-react-native-keyboard-aware-scroll-view@^0.9.5:
-  version "0.9.5"
-  resolved "https://registry.npmmirror.com/react-native-keyboard-aware-scroll-view/download/react-native-keyboard-aware-scroll-view-0.9.5.tgz#e2e9665d320c188e6b1f22f151b94eb358bf9b71"
-  integrity sha1-4ulmXTIMGI5rHyLxUblOs1i/m3E=
-  dependencies:
-    prop-types "^15.6.2"
-    react-native-iphone-x-helper "^1.0.3"
-
 react-native-reanimated@^2.3.1:
   version "2.3.1"
   resolved "https://registry.npmmirror.com/react-native-reanimated/download/react-native-reanimated-2.3.1.tgz"
@@ -6626,14 +5611,6 @@ react-native-screens@^3.10.1, react-native-screens@^3.4.0:
   dependencies:
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
-
-react-native-svg@^12.1.1:
-  version "12.1.1"
-  resolved "https://registry.npmmirror.com/react-native-svg/download/react-native-svg-12.1.1.tgz#5f292410b8bcc07bbc52b2da7ceb22caf5bcaaee"
-  integrity sha1-XykkELi8wHu8UrLafOsiyvW8qu4=
-  dependencies:
-    css-select "^2.1.0"
-    css-tree "^1.0.0-alpha.39"
 
 react-native-switch-pro@^1.0.5:
   version "1.0.5"
@@ -6949,7 +5926,7 @@ ret@~0.1.10:
   resolved "https://registry.nlark.com/ret/download/ret-0.1.15.tgz"
   integrity "sha1-uKSCXVvbH8P29Twrwz+BOIaBx7w= sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg=="
 
-rimraf@^2.5.4, rimraf@^2.6.3:
+rimraf@^2.5.4:
   version "2.7.1"
   resolved "https://registry.npm.taobao.org/rimraf/download/rimraf-2.7.1.tgz?cache=0&sync_timestamp=1618752800123&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frimraf%2Fdownload%2Frimraf-2.7.1.tgz"
   integrity "sha1-NXl/E6f9rcVmFCwp1PB8ytSD4+w= sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w=="
@@ -7189,11 +6166,6 @@ sisteransi@^1.0.5:
   resolved "https://registry.nlark.com/sisteransi/download/sisteransi-1.0.5.tgz"
   integrity "sha1-E01oEpd1ZDfMBcoBNw06elcQde0= sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg=="
 
-slash@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmmirror.com/slash/download/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"
-  integrity sha1-3lUoUaF1nfOo8gZTVEL17E3eq0Q=
-
 slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.nlark.com/slash/download/slash-3.0.0.tgz"
@@ -7328,11 +6300,6 @@ sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.nlark.com/sprintf-js/download/sprintf-js-1.0.3.tgz"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
-
-stable-hash@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.npmmirror.com/stable-hash/download/stable-hash-0.0.2.tgz#a909deaa5b9d430b100ca0a10132a533f2665e94"
-  integrity sha1-qQneqludQwsQDKChATKlM/JmXpQ=
 
 stack-utils@^2.0.2:
   version "2.0.5"
@@ -7562,18 +6529,6 @@ through2@^2.0.1:
     readable-stream "~2.3.6"
     xtend "~4.0.1"
 
-tinycolor2@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.npmmirror.com/tinycolor2/download/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
-  integrity sha1-P2pNEHGtB2dtf6Ry4frECnGdiAM=
-
-tmp@^0.0.33:
-  version "0.0.33"
-  resolved "https://registry.nlark.com/tmp/download/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
-  integrity sha1-bTQzWIl2jSGyvNoKonfO07G/rfk=
-  dependencies:
-    os-tmpdir "~1.0.2"
-
 tmpl@1.0.5:
   version "1.0.5"
   resolved "https://registry.nlark.com/tmpl/download/tmpl-1.0.5.tgz"
@@ -7647,7 +6602,7 @@ tslib@^1.8.1:
   resolved "https://registry.nlark.com/tslib/download/tslib-1.14.1.tgz"
   integrity "sha1-zy04vcNKE0vK8QkcQfZhni9nLQA= sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg=="
 
-tslib@^2.0.1, tslib@^2.1.0:
+tslib@^2.0.1:
   version "2.3.1"
   resolved "https://registry.nlark.com/tslib/download/tslib-2.3.1.tgz"
   integrity "sha1-6KM1rdXOrlGqJh0ypJAVjvBC7wE= sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw=="

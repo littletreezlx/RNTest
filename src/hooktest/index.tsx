@@ -1,12 +1,13 @@
 import React from 'react';
-import { View } from 'react-native';
+import {View} from 'react-native';
+import UseMemoPage from './UseMemoPage';
 
-export const ReanimatedTestPage = () => {
+export const HookTestPage = () => {
   return (
     <>
       {/* <WorkletsPage /> */}
       {/* <SharedValuePage/> */}
-      <Usememo/>
+      <UseMemoPage />
     </>
   );
 };

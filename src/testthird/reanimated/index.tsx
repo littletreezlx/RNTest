@@ -1,7 +1,8 @@
 import React from 'react';
-import { View } from 'react-native';
-import { CombinedPage } from './CombinedPage';
+import {View} from 'react-native';
+import {CombinedPage} from './CombinedPage';
 import SharedValuePage from './SharedValuePage';
+import {UseAnimatedScrollHandlerPage} from './UseAnimatedScrollHandlerPage';
 import {WorkletsPage} from './WorkletsPage';
 
 export const ReanimatedTestPage = () => {
@@ -9,8 +10,8 @@ export const ReanimatedTestPage = () => {
     <View>
       {/* <WorkletsPage /> */}
       {/* <SharedValuePage/> */}
-      <CombinedPage/>
-
+      {/* <CombinedPage /> */}
+      <UseAnimatedScrollHandlerPage />
     </View>
   );
 };
