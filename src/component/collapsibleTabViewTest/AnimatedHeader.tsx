@@ -35,8 +35,6 @@ export const Header = () => {
   );
 };
 
-
-
 const AnimatedHeaderPage: ExampleComponentType = () => {
   return (
     <ExampleComponent

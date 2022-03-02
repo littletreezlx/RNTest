@@ -4,6 +4,7 @@ import {
   StyleSheet,
   useWindowDimensions,
   View,
+  ViewPagerAndroidBase,
 } from 'react-native';
 import Animated, {
   runOnJS,
@@ -41,7 +42,7 @@ import {
  * Basic usage looks like this:
  *
  * ```tsx
- * import { Tabs } from '../../downloadCollapse'
+ * import { Tabs } from 'react-native-collapsible-tab-view'
  *
  * const Example = () => {
  *   return (
@@ -82,6 +83,7 @@ export const Container = React.memo(
         onIndexChange,
         onTabChange,
         width: customWidth,
+        allowHeaderOverscroll,
       },
       ref,
     ) => {
@@ -106,6 +108,10 @@ export const Container = React.memo(
       );
 
       const contentInset = useDerivedValue(() => {
+        if (allowHeaderOverscroll) return 0;
+
+        // necessary for the refresh control on iOS to be positioned underneath the header
+        // this also adjusts the scroll bars to clamp underneath the header area
         return IS_IOS
           ? (headerHeight.value || 0) + (tabBarHeight.value || 0)
           : 0;
@@ -239,13 +245,13 @@ export const Container = React.memo(
       // the next index in advance
       useAnimatedReaction(
         () => {
-          const nextIndex = isSwiping.value
-            ? Math.round(indexDecimal.value)
-            : null;
+          const nextIndex = Math.round(indexDecimal.value);
+          // console.log('nextIndex' + nextIndex);
           return nextIndex;
         },
         nextIndex => {
           if (nextIndex !== null && nextIndex !== index.value) {
+            // console.log('calculateNextOffset' + nextIndex);
             calculateNextOffset.value = nextIndex;
           }
         },
@@ -268,6 +274,9 @@ export const Container = React.memo(
           if (i !== index.value) {
             offset.value =
               scrollY.value[index.value] - scrollY.value[i] + offset.value;
+
+            // console.log('nextIndex' + i);
+            console.log('offset' + offset.value);
             runOnJS(propagateTabChange)({
               prevIndex: index.value,
               index: i,
@@ -284,12 +293,15 @@ export const Container = React.memo(
         {
           onScroll: event => {
             const {x} = event.contentOffset;
+            // console.log('x' + x);
             scrollX.value = x;
           },
           onBeginDrag: () => {
+            console.log('onBeginDrag');
             isSwiping.value = true;
           },
           onMomentumEnd: () => {
+            console.log('onMomentumEnd');
             isSwiping.value = false;
           },
         },
@@ -299,6 +311,8 @@ export const Container = React.memo(
       const renderItem = React.useCallback(
         ({index: i}) => {
           if (!tabNames.value[i]) return null;
+          console.log('lazy' + lazy);
+
           return (
             <TabNameContext.Provider value={tabNames.value[i]}>
               {lazy ? (
@@ -389,7 +403,8 @@ export const Container = React.memo(
           // when is scrolling or gliding.
           if (!isScrolling.value && !isGliding.value) {
             const i = tabNames.value.findIndex(n => n === name);
-            calculateNextOffset.value = i;
+
+            console.log(i);
             if (name === focusedTab.value) {
               const ref = refMap[name];
               runOnUI(scrollToImpl)(
@@ -399,7 +414,13 @@ export const Container = React.memo(
                 true,
               );
             } else {
-              containerRef.current?.scrollToIndex({animated: true, index: i});
+              console.log('111');
+              containerRef.current?.scrollToIndex({
+                animated: true,
+                index: i,
+                // viewOffset: 200,
+                viewPosition: 0,
+              });
             }
           }
         },
@@ -470,6 +491,7 @@ export const Container = React.memo(
             contentHeights,
             headerTranslateY,
             width,
+            allowHeaderOverscroll,
           }}>
           <Animated.View
             style={[styles.container, {width}, containerStyle]}
@@ -522,7 +544,7 @@ export const Container = React.memo(
                 keyExtractor={keyExtractor}
                 renderItem={renderItem}
                 horizontal
-                pagingEnabled
+                pagingEnabled={false}
                 onScroll={scrollHandlerX}
                 showsHorizontalScrollIndicator={false}
                 getItemLayout={getItemLayout}
@@ -533,6 +555,7 @@ export const Container = React.memo(
               />
             )}
           </Animated.View>
+          {/* <ViewPagerAndroidBase></ViewPagerAndroidBase> */}
         </Context.Provider>
       );
     },

@@ -7,7 +7,8 @@ import {
   MutableRefObject,
   useEffect,
 } from 'react';
-import {ContainerRef, RefComponent} from '.';
+import {StyleSheet} from 'react-native';
+import {ContainerRef, RefComponent} from 'react-native-collapsible-tab-view';
 import Animated, {
   cancelAnimation,
   useAnimatedReaction,
@@ -124,7 +125,13 @@ export function useTabNameContext(): TabName {
  * You can use this to get the progessViewOffset and pass to the refresh control of scroll view.
  */
 export function useCollapsibleStyle(): CollapsibleStyle {
-  const {headerHeight, tabBarHeight, containerHeight, width} = useTabsContext();
+  const {
+    headerHeight,
+    tabBarHeight,
+    containerHeight,
+    width,
+    allowHeaderOverscroll,
+  } = useTabsContext();
   const [containerHeightVal, tabBarHeightVal, headerHeightVal] = [
     useConvertAnimatedToValue(containerHeight),
     useConvertAnimatedToValue(tabBarHeight),
@@ -134,16 +141,29 @@ export function useCollapsibleStyle(): CollapsibleStyle {
     () => ({
       style: {width},
       contentContainerStyle: {
-        minHeight: IS_IOS
-          ? (containerHeightVal || 0) - (tabBarHeightVal || 0)
-          : (containerHeightVal || 0) + (headerHeightVal || 0),
-        paddingTop: IS_IOS
-          ? 0
-          : (headerHeightVal || 0) + (tabBarHeightVal || 0),
+        minHeight:
+          IS_IOS && !allowHeaderOverscroll
+            ? (containerHeightVal || 0) - (tabBarHeightVal || 0)
+            : (containerHeightVal || 0) + (headerHeightVal || 0),
+        paddingTop:
+          IS_IOS && !allowHeaderOverscroll
+            ? 0
+            : (headerHeightVal || 0) + (tabBarHeightVal || 0),
       },
-      progressViewOffset: (headerHeightVal || 0) + (tabBarHeightVal || 0),
+      progressViewOffset:
+        // on iOS we need the refresh control to be at the top if overscrolling
+        IS_IOS && allowHeaderOverscroll
+          ? 0
+          : // on android we need it below the header or it doesn't show because of z-index
+            (headerHeightVal || 0) + (tabBarHeightVal || 0),
     }),
-    [containerHeightVal, headerHeightVal, tabBarHeightVal, width],
+    [
+      allowHeaderOverscroll,
+      containerHeightVal,
+      headerHeightVal,
+      tabBarHeightVal,
+      width,
+    ],
   );
 }
 
@@ -201,7 +221,10 @@ export function useScroller<T extends RefComponent>() {
     ) => {
       'worklet';
       if (!ref) return;
-      // console.log(`${_debugKey}, y: ${y}, y adjusted: ${y - contentInset}`)
+      //! this is left here on purpose to ease troubleshooting (uncomment when necessary)
+      // console.log(
+      //   `${_debugKey}, y: ${y}, y adjusted: ${y - contentInset.value}`
+      // )
       scrollToImpl(ref, x, y - contentInset.value, animated);
     },
     [contentInset],
@@ -233,6 +256,8 @@ export const useScrollHandlerY = (name: TabName) => {
     isSnapping,
     snappingTo,
     contentHeights,
+    indexDecimal,
+    allowHeaderOverscroll,
   } = useTabsContext();
 
   const enabled = useSharedValue(false);
@@ -341,6 +366,8 @@ export const useScrollHandlerY = (name: TabName) => {
     {
       onScroll: event => {
         if (!enabled.value) return;
+        console.log('focus' + focusedTab.value);
+        console.log('name' + name);
 
         if (focusedTab.value === name) {
           if (IS_IOS) {
@@ -352,20 +379,22 @@ export const useScrollHandlerY = (name: TabName) => {
               (containerHeight.value || 0) +
               contentInset.value;
             // make sure the y value is clamped to the scrollable size (clamps overscrolling)
-            scrollYCurrent.value = interpolate(
-              y,
-              [0, clampMax],
-              [0, clampMax],
-              Extrapolate.CLAMP,
-            );
+            scrollYCurrent.value = allowHeaderOverscroll
+              ? y
+              : interpolate(y, [0, clampMax], [0, clampMax], Extrapolate.CLAMP);
           } else {
             const {y} = event.contentOffset;
+            console.log('contentOffset' + y);
+
             scrollYCurrent.value = y;
           }
+
+          // scrollYCurrent.value = y;
 
           scrollY.value[index.value] = scrollYCurrent.value;
           oldAccScrollY.value = accScrollY.value;
           accScrollY.value = scrollY.value[index.value] + offset.value;
+          // console.log('accScrollY' + accScrollY.value);
 
           if (!isSnapping.value && revealHeaderOnScroll) {
             const delta = accScrollY.value - oldAccScrollY.value;
@@ -451,24 +480,37 @@ export const useScrollHandlerY = (name: TabName) => {
   // sync unfocused scenes
   useAnimatedReaction(
     () => {
-      return (
+      if (
         !isSnapping.value &&
         !isScrolling.value &&
         !isGliding.value &&
-        enabled.value
-      );
+        !enabled.value
+      ) {
+        return false;
+      }
+
+      // if the index is decimal, then we're in between panes
+      const isChangingPane = !Number.isInteger(indexDecimal.value);
+
+      return isChangingPane;
     },
-    sync => {
-      if (sync && focusedTab.value !== name) {
+    (isSyncNeeded, wasSyncNeeded) => {
+      if (
+        isSyncNeeded &&
+        isSyncNeeded !== wasSyncNeeded &&
+        focusedTab.value !== name
+      ) {
         let nextPosition = null;
-        const focusedScrollY = scrollY.value[index.value];
+        const focusedScrollY = scrollY.value[Math.round(indexDecimal.value)];
         const tabScrollY = scrollY.value[tabIndex];
         const areEqual = focusedScrollY === tabScrollY;
 
         if (!areEqual) {
-          const currIsOnTop = tabScrollY <= headerScrollDistance.value + 1;
+          const currIsOnTop =
+            tabScrollY + StyleSheet.hairlineWidth <= headerScrollDistance.value;
           const focusedIsOnTop =
-            focusedScrollY <= headerScrollDistance.value + 1;
+            focusedScrollY + StyleSheet.hairlineWidth <=
+            headerScrollDistance.value;
 
           if (revealHeaderOnScroll) {
             const hasGap = accDiffClamp.value > tabScrollY;

@@ -97,6 +97,29 @@ function FlatListImpl<R>(
   );
   const memoStyle = React.useMemo(() => [_style, style], [_style, style]);
 
+  // const memoContentContainerStyle = React.useMemo(() => {
+  //   let init = _contentContainerStyle.paddingTop;
+  //   let newPaddingTop = init + contentInset.value;
+  //   let style = {paddingTop: newPaddingTop};
+  //   return [
+  //     style,
+  //     // TODO: investigate types
+  //     contentContainerStyle as any,
+  //   ];
+  // }, [_contentContainerStyle, contentContainerStyle, contentInset.value]);
+
+  // const memoContentContainerStyle = React.useMemo(() => {
+  //   console.log('contentInset___' + contentInset.value);
+  //   return {paddingTop: contentInset.value};
+  // }, [contentInset.value]);
+
+
+  // const navTitleAnimStyle = useAnimatedStyle(() => {
+  //   return {
+  //     top: upScrollPercent.value,
+  //   };
+  // });
+
   return (
     // @ts-expect-error typescript complains about `unknown` in the memo, it should be T
     <FlatListMemo
@@ -105,6 +128,7 @@ function FlatListImpl<R>(
       bouncesZoom={false}
       style={memoStyle}
       contentContainerStyle={memoContentContainerStyle}
+      // contentContainerStyle={{paddingTop: 100}}
       progressViewOffset={progressViewOffset}
       onScroll={scrollHandler}
       onContentSizeChange={scrollContentSizeChangeHandlers}

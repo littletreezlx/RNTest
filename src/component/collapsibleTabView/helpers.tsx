@@ -10,7 +10,8 @@ export const ONE_FRAME_MS = 16;
 /** check if app is in RTL mode or not */
 export const {isRTL} = I18nManager;
 
-export const IS_IOS = Platform.OS === 'ios';
+// export const IS_IOS = Platform.OS === 'ios'
+export const IS_IOS = false;
 
 export const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
 

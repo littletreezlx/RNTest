@@ -1,15 +1,12 @@
-import React from 'react'
-import { StyleSheet, Pressable, Platform } from 'react-native'
-import Animated, {
-  interpolate,
-  useAnimatedStyle,
-} from 'react-native-reanimated'
+import React from 'react';
+import {StyleSheet, Pressable, Platform} from 'react-native';
+import Animated, {interpolate, useAnimatedStyle} from 'react-native-reanimated';
 
-import { TabName } from '../types'
-import { MaterialTabItemProps } from './types'
+import {TabName} from '../types';
+import {MaterialTabItemProps} from './types';
 
-export const TABBAR_HEIGHT = 48
-const DEFAULT_COLOR = 'rgba(0, 0, 0, 1)'
+export const TABBAR_HEIGHT = 48;
+const DEFAULT_COLOR = 'rgba(0, 0, 0, 1)';
 
 /**
  * Any additional props are passed to the pressable component.
@@ -37,20 +34,20 @@ export const MaterialTabItem = <T extends TabName = any>({
         indexDecimal.value,
         [index - 1, index, index + 1],
         [inactiveOpacity, 1, inactiveOpacity],
-        Animated.Extrapolate.CLAMP
+        Animated.Extrapolate.CLAMP,
       ),
       color:
         Math.abs(index - indexDecimal.value) < 0.5
           ? activeColor
           : inactiveColor,
-    }
-  })
+    };
+  });
 
   return (
     <Pressable
       onLayout={onLayout}
-      style={({ pressed }) => [
-        { opacity: pressed ? pressOpacity : 1 },
+      style={({pressed}) => [
+        {opacity: pressed ? pressOpacity : 1},
         !scrollEnabled && styles.grow,
         styles.item,
         style,
@@ -60,14 +57,13 @@ export const MaterialTabItem = <T extends TabName = any>({
         borderless: true,
         color: pressColor,
       }}
-      {...rest}
-    >
+      {...rest}>
       <Animated.Text style={[styles.label, stylez, labelStyle]}>
         {label}
       </Animated.Text>
     </Pressable>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   grow: {
@@ -82,4 +78,4 @@ const styles = StyleSheet.create({
   label: {
     margin: 4,
   },
-})
+});

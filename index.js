@@ -5,7 +5,6 @@ import {store} from './src/redux/store/store';
 import React, {Profiler} from 'react';
 import MyCollapseTestPage from './src/collapse/my/MyCollapseTestPage';
 import AnimatedPage from './src/collapse/my/AnimatedPage';
-import CollapseTestPage from './src/collapse/thirdpart/CollapseTestPage';
 import TalentPageNew from './src/zozotest/talent/TalentPage';
 import {FadeInView} from './src/anim/reactAnim/FadeInViewPage';
 import UseEffectTestPage from './src/hooktest/UseEffectTestPage';
@@ -20,13 +19,14 @@ import {ReactAnimTestPage} from './src/anim/reactAnim';
 import BottomButtonPage from './src/other/bottom/BottomButtonPage';
 import ModalPage from './src/other/dialog/CenterDialog';
 import CenterDialogPage from './src/other/dialog/CenterDialogPage';
-import QuickStartDemo from './src/collapse/thirdpart/Shared/QuickStartDemo';
+import QuickStartDemo from './src/component/collapsibleTabViewTest/Shared/QuickStartDemo';
 import TabViewPage from './src/zozotest/TabViewPage';
 import SingleView from './src/zozotest/SingleView';
 import SwitchPage from './src/testthird/SwitchPage';
 import HocTestPage from './src/hoc/HocTestPage';
 import UseStateTestPage from './src/hooktest/UseStateTestPage';
-import { HookTestPage } from './src/hooktest';
+import {HookTestPage} from './src/hooktest';
+import CollapseTestPage from './src/component/collapsibleTabViewTest/CollapseTestPage';
 
 // const MainPage = UseStateTestPage
 // const MainPage = UseContextTestPage
@@ -83,8 +83,10 @@ const RNTest = () => {
       </Profiler> */}
 
       {/* <UseEffectTestPage /> */}
-      <HookTestPage />
+      {/* <HookTestPage /> */}
       {/* <ReanimatedTestPage /> */}
+      <CollapseTestPage />
+      {/* <FlatlistPage /> */}
     </Provider>
   );
 };
