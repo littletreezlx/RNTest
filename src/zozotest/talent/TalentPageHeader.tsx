@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {Text, StyleSheet, View} from 'react-native';
-import {useHeaderMeasurements} from 'react-native-collapsible-tab-view';
 import Animated, {interpolate, useAnimatedStyle} from 'react-native-reanimated';
+import { useHeaderMeasurements } from '../../component/collapsibleTabView';
 
 const MIN_HEADER_HEIGHT = 50;
 

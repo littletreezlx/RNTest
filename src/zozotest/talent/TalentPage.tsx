@@ -1,6 +1,7 @@
 import React from 'react';
 import {ListRenderItem, StyleSheet, Text, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import { Tabs } from '../../component/collapsibleTabView';
 // import {
 //   CollapsibleProps,
 //   CollapsibleRef,
@@ -8,13 +9,6 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 //   Tabs,
 //   useHeaderMeasurements,
 // } from '../../collapse/collapsibleTabView';
-import {
-  CollapsibleProps,
-  CollapsibleRef,
-  Tab,
-  Tabs,
-  useHeaderMeasurements,
-} from 'react-native-collapsible-tab-view';
 import TalentPageHeader from './TalentPageHeader';
 
 export const MIN_HEADER_HEIGHT = 48;

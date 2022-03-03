@@ -31,7 +31,7 @@ const mockData = [
   '友善',
 ];
 
-const MyCollapseTestPage = () => {
+const OldCollapseTestPage = () => {
   const scrollY = useRef(new Animated.Value(0)).current;
 
   // P.S. 270,217,280区间的映射是告诉interpolate，所有大于270的值都映射成-50
@@ -103,4 +103,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MyCollapseTestPage;
+export default OldCollapseTestPage;

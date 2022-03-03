@@ -3,7 +3,7 @@ import {AppRegistry} from 'react-native';
 import {Provider} from 'react-redux';
 import {store} from './src/redux/store/store';
 import React, {Profiler} from 'react';
-import MyCollapseTestPage from './src/collapse/my/MyCollapseTestPage';
+import MyCollapseTestPage from './src/collapse/my/OldCollapseTestPage';
 import AnimatedPage from './src/collapse/my/AnimatedPage';
 import TalentPageNew from './src/zozotest/talent/TalentPage';
 import {FadeInView} from './src/anim/reactAnim/FadeInViewPage';
@@ -27,6 +27,9 @@ import HocTestPage from './src/hoc/HocTestPage';
 import UseStateTestPage from './src/hooktest/UseStateTestPage';
 import {HookTestPage} from './src/hooktest';
 import CollapseTestPage from './src/component/collapsibleTabViewTest/CollapseTestPage';
+import NewCollapseTestPage from './src/collapse/my/NewCollapseTestPage';
+import {setCustomText} from './src/other/font/FontUtil';
+import FontTestPage from './src/other/font/FontTestPage';
 
 // const MainPage = UseStateTestPage
 // const MainPage = UseContextTestPage
@@ -64,6 +67,7 @@ function onRenderCallback(
   `,
   );
 }
+setCustomText();
 
 const RNTest = () => {
   console.log('render___out');
@@ -85,8 +89,10 @@ const RNTest = () => {
       {/* <UseEffectTestPage /> */}
       {/* <HookTestPage /> */}
       {/* <ReanimatedTestPage /> */}
-      <CollapseTestPage />
+      {/* <NewCollapseTestPage /> */}
       {/* <FlatlistPage /> */}
+
+      <FontTestPage />
     </Provider>
   );
 };
