@@ -1,14 +1,17 @@
-import {FlatList, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import {Button, FlatList, StyleSheet, Text, View} from 'react-native';
+import React, {useState} from 'react';
 import HocFlatList from './HocFlatList';
 import HocText from './HocText';
 
+const HocTextView = HocText(props => <View style={styles.box} {...props} />, 5);
+
 const HocTestPage = () => {
-  const HocTextView = () => HocText(() => <View style={styles.box} />, 5);
+  const [count, setCount] = useState(100);
 
   return (
     <View>
-      <HocTextView />
+      <HocTextView log={count} />
+      <Button title="setCount" onPress={() => setCount(count => count + 1)} />
     </View>
   );
 };

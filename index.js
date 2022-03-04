@@ -30,6 +30,7 @@ import CollapseTestPage from './src/component/collapsibleTabViewTest/CollapseTes
 import NewCollapseTestPage from './src/collapse/my/NewCollapseTestPage';
 import {setCustomText} from './src/other/font/FontUtil';
 import FontTestPage from './src/other/font/FontTestPage';
+import UseRefPage from './src/hooktest/UseRefPage';
 
 // const MainPage = UseStateTestPage
 // const MainPage = UseContextTestPage
@@ -92,7 +93,8 @@ const RNTest = () => {
       {/* <NewCollapseTestPage /> */}
       {/* <FlatlistPage /> */}
 
-      <FontTestPage />
+      {/* <FontTestPage /> */}
+      <UseRefPage />
     </Provider>
   );
 };
