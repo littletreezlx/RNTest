@@ -1,18 +1,19 @@
 import {Button, FlatList, StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import {withLog} from './HocProxyFunction';
+import {useLog, useSize} from './UseHook';
 
-const OldView = props => <View style={styles.box} {...props} />;
+const HookView = props => {
+  useLog();
+  const {newStyle} = useSize(props);
+  return <View style={styles.box} {...newStyle} />;
+};
 
-const LogView = withLog(OldView);
-
-const LogSizeView = withLog(LogView, 5);
-
-const HocTestPage = () => {
+const UseHookTestPage = () => {
   const [size, setSize] = useState(100);
   return (
     <View>
-      <LogSizeView size={size} />
+      <HookView size={size} />
       <Button title="setCount" onPress={() => setSize(size => size + 10)} />
     </View>
   );
@@ -25,4 +26,4 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
   },
 });
-export default HocTestPage;
+export default UseHookTestPage;

@@ -1,6 +1,5 @@
 import React from 'react';
-import {Dimensions, Text, View} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {Dimensions, Text, TouchableOpacity, View} from 'react-native';
 
 export const ConfirmDialogPage = () => {
   const [isOpen, setIsOpen] = React.useState(false);

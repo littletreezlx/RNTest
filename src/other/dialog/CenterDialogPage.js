@@ -8,7 +8,6 @@ import {
   TouchableHighlight,
   View,
 } from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 import CenterDialog from './CenterDialog';
 
 const CenterDialogPage = () => {

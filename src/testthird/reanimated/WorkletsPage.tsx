@@ -1,6 +1,5 @@
 import React from 'react';
 import {Button, Dimensions, Text, View} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 import { useAnimatedStyle, useSharedValue } from 'react-native-reanimated';
 
 export const WorkletsPage = () => {

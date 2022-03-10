@@ -1,36 +1,10 @@
-import 'react-native-gesture-handler';
 import {AppRegistry} from 'react-native';
 import {Provider} from 'react-redux';
 import {store} from './src/redux/store/store';
 import React, {Profiler} from 'react';
-import MyCollapseTestPage from './src/collapse/my/OldCollapseTestPage';
-import AnimatedPage from './src/collapse/my/AnimatedPage';
-import TalentPageNew from './src/zozotest/talent/TalentPage';
-import {FadeInView} from './src/anim/reactAnim/FadeInViewPage';
-import UseEffectTestPage from './src/hooktest/UseEffectTestPage';
-import PureComponentPage from './src/other/pureComponent/PureComponentPage';
-import FlatlistPage from './src/flatlist/FlatListPage';
-import AlertPage from './src/other/alert/AlertPage';
-import {AlertDialog, NativeBaseProvider} from 'native-base';
-import {NativeBaseTestPage} from './src/other/nativeBase';
-import {ConfirmDialogPage} from './src/base/ConfirmDialogPage';
-import {ReanimatedTestPage} from './src/testthird/reanimated';
-import {ReactAnimTestPage} from './src/anim/reactAnim';
-import BottomButtonPage from './src/other/bottom/BottomButtonPage';
-import ModalPage from './src/other/dialog/CenterDialog';
-import CenterDialogPage from './src/other/dialog/CenterDialogPage';
-import QuickStartDemo from './src/component/collapsibleTabViewTest/Shared/QuickStartDemo';
-import TabViewPage from './src/zozotest/TabViewPage';
-import SingleView from './src/zozotest/SingleView';
-import SwitchPage from './src/testthird/SwitchPage';
-import HocTestPage from './src/hoc/HocTestPage';
-import UseStateTestPage from './src/hooktest/UseStateTestPage';
-import {HookTestPage} from './src/hooktest';
-import CollapseTestPage from './src/component/collapsibleTabViewTest/CollapseTestPage';
-import NewCollapseTestPage from './src/collapse/my/NewCollapseTestPage';
-import {setCustomText} from './src/other/font/FontUtil';
-import FontTestPage from './src/other/font/FontTestPage';
-import UseRefPage from './src/hooktest/UseRefPage';
+import {OnPressPage} from './src/zozotest/collection/onPressPage';
+import CollectionPage from './src/zozotest/collection/old/CollectionPage';
+import { setCustomText } from './src/other/font/FontUtil';
 
 // const MainPage = UseStateTestPage
 // const MainPage = UseContextTestPage
@@ -94,7 +68,10 @@ const RNTest = () => {
       {/* <FlatlistPage /> */}
 
       {/* <FontTestPage /> */}
-      <UseRefPage />
+      {/* <UseRefPage /> */}
+      {/* <TabViewPage /> */}
+
+      <CollectionPage />
     </Provider>
   );
 };
