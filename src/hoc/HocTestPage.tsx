@@ -13,6 +13,8 @@ const HocTestPage = () => {
   return (
     <View>
       <LogSizeView size={size} />
+
+      {/* <LogView size={size} /> */}
       <Button title="setCount" onPress={() => setSize(size => size + 10)} />
     </View>
   );

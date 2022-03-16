@@ -1,45 +1,36 @@
 import React, {memo, useCallback, useEffect, useMemo, useState} from 'react';
 import {FlatList, StyleSheet, Text, View} from 'react-native';
 import {NewItem} from './CollectionItem';
+import {useSelectableList} from './useSelectableList';
 
 const DATA = Array.from(new Array(10).keys());
 
-// console.log(DATA);
 const newData = DATA.map(number => {
   return {value: number};
 });
-// console.log(newData);
 
 const Divier = () => <View style={styles.divider} />;
 const CollectionList = () => {
   const [data, setData] = useState(newData);
 
-  const onSelectedStateChanged = (index, isSelected) => {
-    // const sum = DATA.reduce((prev, cur, index, arr) => {
-    //   // return prev + cur.isMultSelected ?? 1;
-    //   // console.log(prev);
-    //   // console.log(cur);
-    //   console.log(cur.isMultSelected);
+  const {onSelectedStateChanged, getSelectedItems} = useSelectableList(setData);
 
-    //   return prev + cur.isMultSelected ?? 1;
-    // });
-
-    // console.log(isSelected);
-
-    setData(state => {
-      let newState = [...state];
-      newState[index].isSelected = isSelected;
-      return newState;
-    });
-  };
-
-  console.log(data);
+  const onSelectedStateChangedNew = useCallback(
+    (index: number, isSelected: boolean) => {
+      onSelectedStateChanged(index, isSelected);
+      console.log(getSelectedItems(data));
+    },
+    [data, getSelectedItems, onSelectedStateChanged],
+  );
 
   return (
     <FlatList<Number>
       data={data}
       renderItem={props => (
-        <NewItem onSelectedStateChanged={onSelectedStateChanged} {...props} />
+        <NewItem
+          onSelectedStateChanged={onSelectedStateChangedNew}
+          {...props}
+        />
       )}
       keyExtractor={(item: Number, index: Number) => {
         return '' + index;

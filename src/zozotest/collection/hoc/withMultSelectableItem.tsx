@@ -17,7 +17,7 @@ export function withMultSelectableItem(WrapedComponent, SelectedComponent) {
       ...otherProps
     }: MultSelectableItemProps) => {
       //   console.log('render_mult_item');
-      console.log(item);
+      // console.log(item);
       // console.log('props');
       // console.log(props);
       //   const [isSelected, setIsSelected] = useState(false);

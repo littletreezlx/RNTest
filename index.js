@@ -5,6 +5,7 @@ import React, {Profiler} from 'react';
 import {OnPressPage} from './src/zozotest/collection/onPressPage';
 import CollectionPage from './src/zozotest/collection/old/CollectionPage';
 import { setCustomText } from './src/other/font/FontUtil';
+import HocTestPage from './src/hoc/HocTestPage';
 
 // const MainPage = UseStateTestPage
 // const MainPage = UseContextTestPage
@@ -71,7 +72,9 @@ const RNTest = () => {
       {/* <UseRefPage /> */}
       {/* <TabViewPage /> */}
 
-      <CollectionPage />
+      {/* <CollectionPage /> */}
+      <HocTestPage />
+
     </Provider>
   );
 };

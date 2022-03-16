@@ -6,10 +6,9 @@ import {
   Text,
   TouchableOpacity,
 } from 'react-native';
-import {withMultSelectableItem} from '../hoc/MultipleSelectItem';
+import {withMultSelectableItem} from '../hoc/withMultSelectableItem';
 
 const CollectionItem: ListRenderItem<number> = ({item, index}) => {
-  // console.log('render_item_' + index);
 
   const onPress = () => {
     console.log('onPress Item');
