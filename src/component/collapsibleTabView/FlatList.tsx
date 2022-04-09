@@ -113,7 +113,6 @@ function FlatListImpl<R>(
   //   return {paddingTop: contentInset.value};
   // }, [contentInset.value]);
 
-
   // const navTitleAnimStyle = useAnimatedStyle(() => {
   //   return {
   //     top: upScrollPercent.value,

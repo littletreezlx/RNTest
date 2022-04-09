@@ -6,6 +6,8 @@ import {OnPressPage} from './src/zozotest/collection/onPressPage';
 import CollectionPage from './src/zozotest/collection/old/CollectionPage';
 import { setCustomText } from './src/other/font/FontUtil';
 import HocTestPage from './src/hoc/HocTestPage';
+import { FlatList } from './src/component/collapsibleTabView';
+import FlatlistPage from './src/flatlist/FlatListPage';
 
 // const MainPage = UseStateTestPage
 // const MainPage = UseContextTestPage
@@ -73,7 +75,9 @@ const RNTest = () => {
       {/* <TabViewPage /> */}
 
       {/* <CollectionPage /> */}
-      <HocTestPage />
+      {/* <HocTestPage /> */}
+      <FlatlistPage />
+
 
     </Provider>
   );
